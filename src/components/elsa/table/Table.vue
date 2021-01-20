@@ -1,11 +1,9 @@
 <script>
-import Pagination from './Pagination';
 import { toHyphenateEvent } from '../utils';
 import { prefix } from '../config';
 
 export default {
-  name: `${prefix}-form`,
-  components: { Pagination },
+  name: `${prefix}-table`,
   props: {
     columns: {
       type: Array,
@@ -74,7 +72,7 @@ export default {
     },
     renderPagination() {
       if (this.pagination) {
-        return this.$createElement(Pagination.name, {
+        return this.$createElement(`${prefix}-pagination`, {
           props: this.pagination,
         });
       }
