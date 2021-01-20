@@ -102,7 +102,7 @@ module.exports = require("is-type-of");
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.i, ".extra-wrap[data-v-72d28285] {\n  font-size: 13px;\n  line-height: 1.5;\n  color: rgba(0, 0, 0, 0.45);\n}\n.extra-wrap i[data-v-72d28285] {\n  margin-right: 5px;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.i, ".extra-wrap[data-v-a6cab022] {\n  font-size: 13px;\n  line-height: 1.5;\n  color: rgba(0, 0, 0, 0.45);\n}\n.extra-wrap i[data-v-a6cab022] {\n  margin-right: 5px;\n}\n", ""]);
 // Exports
 /* harmony default export */ __webpack_exports__["a"] = (___CSS_LOADER_EXPORT___);
 
@@ -482,7 +482,7 @@ var external_vue_default = /*#__PURE__*/__webpack_require__.n(external_vue_);
 var external_element_ui_ = __webpack_require__(3);
 var external_element_ui_default = /*#__PURE__*/__webpack_require__.n(external_element_ui_);
 
-// CONCATENATED MODULE: ./src/components/elsa/utils/scroll-to.js
+// CONCATENATED MODULE: ./src/components/utils/scroll-to.js
 Math.easeInOutQuad = function (t, b, c, d) {
   t /= d / 2;
 
@@ -549,7 +549,7 @@ function scrollTo(to, duration, callback) {
 
   animateScroll();
 }
-// CONCATENATED MODULE: ./src/components/elsa/utils/index.js
+// CONCATENATED MODULE: ./src/components/utils/index.js
 
 function cached(fn) {
   var cache = Object.create(null);
@@ -589,9 +589,9 @@ function toHyphenateEvent(listeners) {
   return eventListeners;
 }
 
-// CONCATENATED MODULE: ./src/components/elsa/config.js
+// CONCATENATED MODULE: ./src/components/config.js
 var prefix = 'elsa';
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/elsa/table/Table.vue?vue&type=script&lang=js&
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/table/Table.vue?vue&type=script&lang=js&
 function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
 
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
@@ -694,7 +694,7 @@ function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) r
     return h('div', [this.renderTable(), this.renderPagination()]);
   }
 });
-// CONCATENATED MODULE: ./src/components/elsa/table/Table.vue?vue&type=script&lang=js&
+// CONCATENATED MODULE: ./src/components/table/Table.vue?vue&type=script&lang=js&
  /* harmony default export */ var table_Tablevue_type_script_lang_js_ = (Tablevue_type_script_lang_js_); 
 // CONCATENATED MODULE: ./node_modules/vue-loader/lib/runtime/componentNormalizer.js
 /* globals __VUE_SSR_CONTEXT__ */
@@ -796,7 +796,7 @@ function normalizeComponent (
   }
 }
 
-// CONCATENATED MODULE: ./src/components/elsa/table/Table.vue
+// CONCATENATED MODULE: ./src/components/table/Table.vue
 var Table_render, staticRenderFns
 
 
@@ -817,9 +817,9 @@ var component = normalizeComponent(
 
 /* hot reload */
 if (false) { var api; }
-component.options.__file = "src/components/elsa/table/Table.vue"
+component.options.__file = "src/components/table/Table.vue"
 /* harmony default export */ var Table = (component.exports);
-// CONCATENATED MODULE: ./src/components/elsa/table/index.js
+// CONCATENATED MODULE: ./src/components/table/index.js
 
 
 Table.install = function (Vue) {
@@ -831,7 +831,7 @@ Table.install = function (Vue) {
 var external_is_type_of_ = __webpack_require__(0);
 var external_is_type_of_default = /*#__PURE__*/__webpack_require__.n(external_is_type_of_);
 
-// CONCATENATED MODULE: ./src/components/elsa/mixins/UtilMixins.js
+// CONCATENATED MODULE: ./src/components/mixins/UtilMixins.js
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
@@ -870,7 +870,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     }
   }
 });
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/elsa/form/FormItem/Upload.vue?vue&type=script&lang=js&
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/form/FormItem/Upload.vue?vue&type=script&lang=js&
 function Uploadvue_type_script_lang_js_ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
 function Uploadvue_type_script_lang_js_objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { Uploadvue_type_script_lang_js_ownKeys(Object(source), true).forEach(function (key) { Uploadvue_type_script_lang_js_defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { Uploadvue_type_script_lang_js_ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
@@ -934,9 +934,9 @@ function Uploadvue_type_script_lang_js_objectWithoutPropertiesLoose(source, excl
     })]);
   }
 });
-// CONCATENATED MODULE: ./src/components/elsa/form/FormItem/Upload.vue?vue&type=script&lang=js&
+// CONCATENATED MODULE: ./src/components/form/FormItem/Upload.vue?vue&type=script&lang=js&
  /* harmony default export */ var FormItem_Uploadvue_type_script_lang_js_ = (Uploadvue_type_script_lang_js_); 
-// CONCATENATED MODULE: ./src/components/elsa/form/FormItem/Upload.vue
+// CONCATENATED MODULE: ./src/components/form/FormItem/Upload.vue
 var Upload_render, Upload_staticRenderFns
 
 
@@ -957,9 +957,9 @@ var Upload_component = normalizeComponent(
 
 /* hot reload */
 if (false) { var Upload_api; }
-Upload_component.options.__file = "src/components/elsa/form/FormItem/Upload.vue"
+Upload_component.options.__file = "src/components/form/FormItem/Upload.vue"
 /* harmony default export */ var Upload = (Upload_component.exports);
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/elsa/form/FormItem/Cascader.vue?vue&type=script&lang=js&
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/form/FormItem/Cascader.vue?vue&type=script&lang=js&
 function Cascadervue_type_script_lang_js_ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
 function Cascadervue_type_script_lang_js_objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { Cascadervue_type_script_lang_js_ownKeys(Object(source), true).forEach(function (key) { Cascadervue_type_script_lang_js_defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { Cascadervue_type_script_lang_js_ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
@@ -1052,9 +1052,9 @@ function Cascadervue_type_script_lang_js_objectWithoutPropertiesLoose(source, ex
     });
   }
 });
-// CONCATENATED MODULE: ./src/components/elsa/form/FormItem/Cascader.vue?vue&type=script&lang=js&
+// CONCATENATED MODULE: ./src/components/form/FormItem/Cascader.vue?vue&type=script&lang=js&
  /* harmony default export */ var FormItem_Cascadervue_type_script_lang_js_ = (Cascadervue_type_script_lang_js_); 
-// CONCATENATED MODULE: ./src/components/elsa/form/FormItem/Cascader.vue
+// CONCATENATED MODULE: ./src/components/form/FormItem/Cascader.vue
 var Cascader_render, Cascader_staticRenderFns
 
 
@@ -1075,9 +1075,9 @@ var Cascader_component = normalizeComponent(
 
 /* hot reload */
 if (false) { var Cascader_api; }
-Cascader_component.options.__file = "src/components/elsa/form/FormItem/Cascader.vue"
+Cascader_component.options.__file = "src/components/form/FormItem/Cascader.vue"
 /* harmony default export */ var Cascader = (Cascader_component.exports);
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/elsa/form/FormItem/Picker.vue?vue&type=script&lang=js&
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/form/FormItem/Picker.vue?vue&type=script&lang=js&
 function Pickervue_type_script_lang_js_ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
 function Pickervue_type_script_lang_js_objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { Pickervue_type_script_lang_js_ownKeys(Object(source), true).forEach(function (key) { Pickervue_type_script_lang_js_defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { Pickervue_type_script_lang_js_ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
@@ -1168,9 +1168,9 @@ function Pickervue_type_script_lang_js_objectWithoutPropertiesLoose(source, excl
     });
   }
 });
-// CONCATENATED MODULE: ./src/components/elsa/form/FormItem/Picker.vue?vue&type=script&lang=js&
+// CONCATENATED MODULE: ./src/components/form/FormItem/Picker.vue?vue&type=script&lang=js&
  /* harmony default export */ var FormItem_Pickervue_type_script_lang_js_ = (Pickervue_type_script_lang_js_); 
-// CONCATENATED MODULE: ./src/components/elsa/form/FormItem/Picker.vue
+// CONCATENATED MODULE: ./src/components/form/FormItem/Picker.vue
 var Picker_render, Picker_staticRenderFns
 
 
@@ -1191,9 +1191,9 @@ var Picker_component = normalizeComponent(
 
 /* hot reload */
 if (false) { var Picker_api; }
-Picker_component.options.__file = "src/components/elsa/form/FormItem/Picker.vue"
+Picker_component.options.__file = "src/components/form/FormItem/Picker.vue"
 /* harmony default export */ var Picker = (Picker_component.exports);
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/elsa/form/FormItem/Index.vue?vue&type=script&lang=js&
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/form/FormItem/Index.vue?vue&type=script&lang=js&
 function Indexvue_type_script_lang_js_ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
 function Indexvue_type_script_lang_js_objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { Indexvue_type_script_lang_js_ownKeys(Object(source), true).forEach(function (key) { Indexvue_type_script_lang_js_defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { Indexvue_type_script_lang_js_ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
@@ -1233,7 +1233,7 @@ function Indexvue_type_script_lang_js_defineProperty(obj, key, value) { if (key 
   },
   computed: {
     elAttrs: function elAttrs() {
-      return this.fieldOptions.elAttrs;
+      return this.fieldOptions.elAttrs || {};
     }
   },
   methods: {
@@ -1311,9 +1311,9 @@ function Indexvue_type_script_lang_js_defineProperty(obj, key, value) { if (key 
     lazyRemoteLoad: function lazyRemoteLoad() {
       var _this2 = this;
 
-      var elAttrs = this.fieldOptions.elAttrs;
-      var isRemote = elAttrs.isRemote,
-          remoteMethod = elAttrs.remoteMethod;
+      var _this$elAttrs = this.elAttrs,
+          isRemote = _this$elAttrs.isRemote,
+          remoteMethod = _this$elAttrs.remoteMethod;
 
       if (!isRemote || !external_is_type_of_default.a["function"](remoteMethod)) {
         return;
@@ -1337,10 +1337,8 @@ function Indexvue_type_script_lang_js_defineProperty(obj, key, value) { if (key 
     lazyLoad: function lazyLoad() {
       var _this3 = this;
 
-      var _this$fieldOptions2 = this.fieldOptions,
-          elTag = _this$fieldOptions2.elTag,
-          elAttrs = _this$fieldOptions2.elAttrs;
-      var lazyLoad = elAttrs.props.lazyLoad;
+      var elTag = this.fieldOptions.elTag;
+      var lazyLoad = this.elAttrs.props.lazyLoad;
       return function (node, resolve) {
         var done = function done(nodes) {
           return resolve(nodes);
@@ -1353,15 +1351,14 @@ function Indexvue_type_script_lang_js_defineProperty(obj, key, value) { if (key 
       };
     },
     checkValueValid: function checkValueValid() {
-      var _this$fieldOptions3 = this.fieldOptions,
-          elTag = _this$fieldOptions3.elTag,
-          elAttrs = _this$fieldOptions3.elAttrs,
-          options = _this$fieldOptions3.options;
+      var _this$fieldOptions2 = this.fieldOptions,
+          elTag = _this$fieldOptions2.elTag,
+          options = _this$fieldOptions2.options;
 
       if (elTag.indexOf('select') !== -1) {
-        if (!elAttrs.multiple && Array.isArray(this.value)) {
+        if (!this.elAttrs.multiple && Array.isArray(this.value)) {
           throw new Error("".concat(this.field, " \u8BBE\u7F6E\u4E0D\u6B63\u786E\uFF0C\u5E94\u4E3A String"));
-        } else if (elAttrs.multiple && !Array.isArray(this.value)) {
+        } else if (this.elAttrs.multiple && !Array.isArray(this.value)) {
           throw new Error("".concat(this.field, " \u8BBE\u7F6E\u4E0D\u6B63\u786E\uFF0C\u5E94\u4E3A Array"));
         }
       }
@@ -1369,10 +1366,9 @@ function Indexvue_type_script_lang_js_defineProperty(obj, key, value) { if (key 
     renderByTag: function renderByTag(h) {
       var _this4 = this;
 
-      var _this$fieldOptions4 = this.fieldOptions,
-          elTag = _this$fieldOptions4.elTag,
-          elAttrs = _this$fieldOptions4.elAttrs,
-          elClass = _this$fieldOptions4.elClass;
+      var _this$fieldOptions3 = this.fieldOptions,
+          elTag = _this$fieldOptions3.elTag,
+          elClass = _this$fieldOptions3.elClass;
 
       var standardTag = this._normalizeElTag(elTag);
 
@@ -1391,8 +1387,8 @@ function Indexvue_type_script_lang_js_defineProperty(obj, key, value) { if (key 
             scopedSlotsFn: this.scopedSlotsFn,
             disabled: this._disabledFormItem(this.field)
           },
-          attrs: Indexvue_type_script_lang_js_objectSpread(Indexvue_type_script_lang_js_objectSpread({}, elAttrs), {}, {
-            placeholder: elAttrs.placeholder || this._setDefaultPlaceholder()
+          attrs: Indexvue_type_script_lang_js_objectSpread(Indexvue_type_script_lang_js_objectSpread({}, this.elAttrs), {}, {
+            placeholder: this.elAttrs.placeholder || this._setDefaultPlaceholder()
           }),
           on: {
             change: function change(value) {
@@ -1406,12 +1402,12 @@ function Indexvue_type_script_lang_js_defineProperty(obj, key, value) { if (key 
         props: Indexvue_type_script_lang_js_objectSpread(Indexvue_type_script_lang_js_objectSpread({}, this.elAttrs), {}, {
           loading: this.loading,
           value: this.value,
-          props: elAttrs.props,
+          props: this.elAttrs.props,
           disabled: this._disabledFormItem(this.field),
           "class": elClass
         }),
-        attrs: Indexvue_type_script_lang_js_objectSpread(Indexvue_type_script_lang_js_objectSpread({}, elAttrs), {}, {
-          placeholder: elAttrs.placeholder || this._setDefaultPlaceholder()
+        attrs: Indexvue_type_script_lang_js_objectSpread(Indexvue_type_script_lang_js_objectSpread({}, this.elAttrs), {}, {
+          placeholder: this.elAttrs.placeholder || this._setDefaultPlaceholder()
         }),
         on: {
           input: function input(value) {
@@ -1438,9 +1434,9 @@ function Indexvue_type_script_lang_js_defineProperty(obj, key, value) { if (key 
     }
   }
 });
-// CONCATENATED MODULE: ./src/components/elsa/form/FormItem/Index.vue?vue&type=script&lang=js&
+// CONCATENATED MODULE: ./src/components/form/FormItem/Index.vue?vue&type=script&lang=js&
  /* harmony default export */ var FormItem_Indexvue_type_script_lang_js_ = (Indexvue_type_script_lang_js_); 
-// CONCATENATED MODULE: ./src/components/elsa/form/FormItem/Index.vue
+// CONCATENATED MODULE: ./src/components/form/FormItem/Index.vue
 var Index_render, Index_staticRenderFns
 
 
@@ -1461,9 +1457,9 @@ var Index_component = normalizeComponent(
 
 /* hot reload */
 if (false) { var Index_api; }
-Index_component.options.__file = "src/components/elsa/form/FormItem/Index.vue"
+Index_component.options.__file = "src/components/form/FormItem/Index.vue"
 /* harmony default export */ var Index = (Index_component.exports);
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/elsa/form/Form.vue?vue&type=script&lang=js&
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/form/Form.vue?vue&type=script&lang=js&
 function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
 
 function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
@@ -1609,9 +1605,7 @@ function Formvue_type_script_lang_js_objectWithoutPropertiesLoose(source, exclud
     /**
      * 覆写 el-form resetFields，扩展支持单个表单项清除
      */
-    resetFields: function resetFields() {
-      var props = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
-
+    resetFields: function resetFields(props) {
       if (!props) {
         this.$refs.elFormRef.resetFields();
       } else {
@@ -1857,32 +1851,32 @@ function Formvue_type_script_lang_js_objectWithoutPropertiesLoose(source, exclud
     }, [].concat(_toConsumableArray(this.drawLayout(this.layout)), _toConsumableArray(this.renderActionBar())));
   }
 });
-// CONCATENATED MODULE: ./src/components/elsa/form/Form.vue?vue&type=script&lang=js&
+// CONCATENATED MODULE: ./src/components/form/Form.vue?vue&type=script&lang=js&
  /* harmony default export */ var form_Formvue_type_script_lang_js_ = (Formvue_type_script_lang_js_); 
 // EXTERNAL MODULE: ./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js
 var injectStylesIntoStyleTag = __webpack_require__(4);
 var injectStylesIntoStyleTag_default = /*#__PURE__*/__webpack_require__.n(injectStylesIntoStyleTag);
 
-// EXTERNAL MODULE: ./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/less-loader/dist/cjs.js??ref--2-2!./node_modules/vue-loader/lib??vue-loader-options!./src/components/elsa/form/Form.vue?vue&type=style&index=0&id=72d28285&lang=less&scoped=true&
-var Formvue_type_style_index_0_id_72d28285_lang_less_scoped_true_ = __webpack_require__(1);
+// EXTERNAL MODULE: ./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/less-loader/dist/cjs.js??ref--2-2!./node_modules/vue-loader/lib??vue-loader-options!./src/components/form/Form.vue?vue&type=style&index=0&id=a6cab022&lang=less&scoped=true&
+var Formvue_type_style_index_0_id_a6cab022_lang_less_scoped_true_ = __webpack_require__(1);
 
-// CONCATENATED MODULE: ./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/less-loader/dist/cjs.js??ref--2-2!./node_modules/vue-loader/lib??vue-loader-options!./src/components/elsa/form/Form.vue?vue&type=style&index=0&id=72d28285&lang=less&scoped=true&
+// CONCATENATED MODULE: ./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/less-loader/dist/cjs.js??ref--2-2!./node_modules/vue-loader/lib??vue-loader-options!./src/components/form/Form.vue?vue&type=style&index=0&id=a6cab022&lang=less&scoped=true&
 
             
 
-var Formvue_type_style_index_0_id_72d28285_lang_less_scoped_true_options = {};
+var Formvue_type_style_index_0_id_a6cab022_lang_less_scoped_true_options = {};
 
-Formvue_type_style_index_0_id_72d28285_lang_less_scoped_true_options.insert = "head";
-Formvue_type_style_index_0_id_72d28285_lang_less_scoped_true_options.singleton = false;
+Formvue_type_style_index_0_id_a6cab022_lang_less_scoped_true_options.insert = "head";
+Formvue_type_style_index_0_id_a6cab022_lang_less_scoped_true_options.singleton = false;
 
-var update = injectStylesIntoStyleTag_default()(Formvue_type_style_index_0_id_72d28285_lang_less_scoped_true_["a" /* default */], Formvue_type_style_index_0_id_72d28285_lang_less_scoped_true_options);
+var update = injectStylesIntoStyleTag_default()(Formvue_type_style_index_0_id_a6cab022_lang_less_scoped_true_["a" /* default */], Formvue_type_style_index_0_id_a6cab022_lang_less_scoped_true_options);
 
 
 
-/* harmony default export */ var form_Formvue_type_style_index_0_id_72d28285_lang_less_scoped_true_ = (Formvue_type_style_index_0_id_72d28285_lang_less_scoped_true_["a" /* default */].locals || {});
-// CONCATENATED MODULE: ./src/components/elsa/form/Form.vue?vue&type=style&index=0&id=72d28285&lang=less&scoped=true&
+/* harmony default export */ var form_Formvue_type_style_index_0_id_a6cab022_lang_less_scoped_true_ = (Formvue_type_style_index_0_id_a6cab022_lang_less_scoped_true_["a" /* default */].locals || {});
+// CONCATENATED MODULE: ./src/components/form/Form.vue?vue&type=style&index=0&id=a6cab022&lang=less&scoped=true&
 
-// CONCATENATED MODULE: ./src/components/elsa/form/Form.vue
+// CONCATENATED MODULE: ./src/components/form/Form.vue
 var Form_render, Form_staticRenderFns
 
 
@@ -1897,24 +1891,24 @@ var Form_component = normalizeComponent(
   Form_staticRenderFns,
   false,
   null,
-  "72d28285",
+  "a6cab022",
   null
   
 )
 
 /* hot reload */
 if (false) { var Form_api; }
-Form_component.options.__file = "src/components/elsa/form/Form.vue"
+Form_component.options.__file = "src/components/form/Form.vue"
 /* harmony default export */ var Form = (Form_component.exports);
-// CONCATENATED MODULE: ./src/components/elsa/form/index.js
+// CONCATENATED MODULE: ./src/components/form/index.js
 
 
 Form.install = function (Vue) {
   Vue.component(Form.name, Form);
 };
 
-/* harmony default export */ var elsa_form = (Form);
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/elsa/pagination/Pagination.vue?vue&type=script&lang=js&
+/* harmony default export */ var components_form = (Form);
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/pagination/Pagination.vue?vue&type=script&lang=js&
 function Paginationvue_type_script_lang_js_objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = Paginationvue_type_script_lang_js_objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
 
 function Paginationvue_type_script_lang_js_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
@@ -1987,9 +1981,9 @@ function Paginationvue_type_script_lang_js_objectWithoutPropertiesLoose(source, 
     });
   }
 });
-// CONCATENATED MODULE: ./src/components/elsa/pagination/Pagination.vue?vue&type=script&lang=js&
+// CONCATENATED MODULE: ./src/components/pagination/Pagination.vue?vue&type=script&lang=js&
  /* harmony default export */ var pagination_Paginationvue_type_script_lang_js_ = (Paginationvue_type_script_lang_js_); 
-// CONCATENATED MODULE: ./src/components/elsa/pagination/Pagination.vue
+// CONCATENATED MODULE: ./src/components/pagination/Pagination.vue
 var Pagination_render, Pagination_staticRenderFns
 
 
@@ -2010,9 +2004,9 @@ var Pagination_component = normalizeComponent(
 
 /* hot reload */
 if (false) { var Pagination_api; }
-Pagination_component.options.__file = "src/components/elsa/pagination/Pagination.vue"
+Pagination_component.options.__file = "src/components/pagination/Pagination.vue"
 /* harmony default export */ var Pagination = (Pagination_component.exports);
-// CONCATENATED MODULE: ./src/components/elsa/pagination/index.js
+// CONCATENATED MODULE: ./src/components/pagination/index.js
 
 
 Pagination.install = function (Vue) {
@@ -2027,7 +2021,7 @@ Pagination.install = function (Vue) {
 
 
 external_vue_default.a.use(external_element_ui_default.a);
-var components = [table, elsa_form, pagination];
+var components = [table, components_form, pagination];
 
 var install = function install(Vue) {
   var opts = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
@@ -2042,7 +2036,7 @@ if (typeof window !== 'undefined' && window.Vue) {
 
 /* harmony default export */ var main = __webpack_exports__["default"] = ({
   ElsaTable: table,
-  ElsaForm: elsa_form,
+  ElsaForm: components_form,
   ElsaPagination: pagination,
   install: install
 });

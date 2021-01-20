@@ -2,7 +2,7 @@
   "name": "elsa",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "libs/elsa.common.js",
   "scripts": {
     "build": "webpack --config=./build/webpack.config.js --mode=production",
     "test": "echo \"Error: no test specified\" && exit 1"

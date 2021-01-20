@@ -1,9 +1,9 @@
 import Vue from 'vue';
 import Element from 'element-ui';
 
-import ElsaTable from './components/elsa/table/index';
-import ElsaForm from './components/elsa/form/index';
-import ElsaPagination from './components/elsa/pagination/index';
+import ElsaTable from './components/table';
+import ElsaForm from './components/form';
+import ElsaPagination from './components/pagination';
 
 Vue.use(Element);
 const components = [ElsaTable, ElsaForm, ElsaPagination];

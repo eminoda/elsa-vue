@@ -101,7 +101,7 @@ export default {
     /**
      * 覆写 el-form resetFields，扩展支持单个表单项清除
      */
-    resetFields(props = []) {
+    resetFields(props) {
       if (!props) {
         this.$refs.elFormRef.resetFields();
       } else {
