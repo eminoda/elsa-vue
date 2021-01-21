@@ -10,6 +10,7 @@ export default {
   props: {
     config: Object,
     layout: Array,
+    disabled: Boolean,
   },
   computed: {
     rules() {
@@ -194,6 +195,7 @@ export default {
       return this._$render('form-item', {
         props: {
           field,
+          disabled: this.disabled,
           value: this.getPathValue(field),
           fieldOptions: this.config[field],
           model: this.elFormOptions.model,

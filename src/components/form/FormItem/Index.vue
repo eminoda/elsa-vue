@@ -16,6 +16,7 @@ export default {
     value: [Number, String, Array, Date],
     field: String,
     scopedSlotsFn: Function,
+    disabled: Boolean,
   },
   data() {
     return {
@@ -146,12 +147,13 @@ export default {
             fieldOptions: this.fieldOptions,
             model: this.model,
             scopedSlotsFn: this.scopedSlotsFn,
-            disabled: this._disabledFormItem(this.field),
+            disabled: this.disabled || this._disabledFormItem(this.field),
           },
           attrs: {
             ...this.elAttrs,
             placeholder: this.elAttrs.placeholder || this._setDefaultPlaceholder(),
           },
+          style: this.elStyle,
           on: {
             change: (value) => {
               this.$emit('change', value);
@@ -167,7 +169,7 @@ export default {
             loading: this.loading,
             value: this.value,
             props: this.elAttrs.props,
-            disabled: this._disabledFormItem(this.field),
+            disabled: this.disabled || this._disabledFormItem(this.field),
           },
           attrs: {
             ...this.elAttrs,
