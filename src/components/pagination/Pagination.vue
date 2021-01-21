@@ -46,13 +46,18 @@ export default {
   },
   render: function(h) {
     const { hidden, autoScroll, currentChange, prevClick, nextClick, sizeChange, ...elProps } = this.$props;
-    return h('el-pagination', {
-      style: {
-        'margin-top': '10px',
-      },
-      props: elProps,
-      on: toHyphenateEvent({ currentChange, prevClick, nextClick, sizeChange }),
-    });
+    if (this.$props.total) {
+      return h('el-pagination', {
+        style: {
+          'margin-top': '30px',
+          'margin-right': '10px',
+          'text-align': 'right',
+        },
+        props: elProps,
+        on: toHyphenateEvent({ currentChange, prevClick, nextClick, sizeChange }),
+      });
+    }
+    return null;
   },
 };
 </script>
