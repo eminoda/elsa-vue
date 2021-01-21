@@ -1,18 +1,19 @@
 import Mock from 'mockjs';
 const Random = Mock.Random;
 
-function buildList(count, hasChildren) {
+function buildList(count, parentId) {
   const list = [];
   let id = 1;
   while (id <= count) {
     const data = {
-      id: id,
+      id: parentId ? parentId + '-' + id : id,
       name: Random.cname(),
       age: Random.integer(10, 100),
       idCard: Random.natural(18),
+      title: Random.integer(0, 2),
       desc: Random.cparagraph(3),
       date: Random.date('yyyy-MM-dd'),
-      hasChildren: count == 1 && hasChildren,
+      hasChildren: Random.integer(1, 5) % 2 == 0 ,
     };
     list.push(data);
     id++;

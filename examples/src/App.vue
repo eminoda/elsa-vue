@@ -9,7 +9,7 @@
               <template slot="title">{{ route.meta.title }}</template>
               <el-menu-item :index="resolvePath(route.path, childItem.path)" v-for="(childItem, index) in route.children" :key="index">{{ childItem.meta.title }}</el-menu-item>
             </el-submenu>
-            <el-menu-item v-else :key="index" :index="route.path">{{ route.meta.title }}</el-menu-item>
+            <!-- <el-menu-item v-else :key="index" :index="route.path">{{ route.meta.title }}</el-menu-item> -->
           </template>
         </el-menu>
       </el-aside>

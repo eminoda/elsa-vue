@@ -14,5 +14,6 @@ export default [
   },
   { label: '身份证号', align: 'center', prop: 'idCard', width: '180' },
   { label: '出生日期', align: 'center', prop: 'date', width: '140' },
-  { label: '个人描述', align: 'center', prop: 'desc', align: 'left', showOverflowTooltip: true },
+  { label: '个人描述', align: 'center', prop: 'desc', width: '500', align: 'left', showOverflowTooltip: true },
+  { label: '操作', align: 'center', prop: 'date', width: '100', customRender: 'action', fixed: 'right' },
 ];
