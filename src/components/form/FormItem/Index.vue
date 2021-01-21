@@ -28,6 +28,9 @@ export default {
     elAttrs() {
       return this.fieldOptions.elAttrs || {};
     },
+    elStyle() {
+      return this.fieldOptions.elStyle || {};
+    },
   },
   methods: {
     _setDefaultPlaceholder() {
@@ -165,12 +168,12 @@ export default {
             value: this.value,
             props: this.elAttrs.props,
             disabled: this._disabledFormItem(this.field),
-            class: elClass,
           },
           attrs: {
             ...this.elAttrs,
             placeholder: this.elAttrs.placeholder || this._setDefaultPlaceholder(),
           },
+          style: this.elStyle,
           on: {
             input: (value) => {
               this.$emit('change', value);

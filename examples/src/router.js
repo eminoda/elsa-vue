@@ -1,6 +1,7 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 import TableIndex from '@/pages/table/Index';
+import FormIndex from '@/pages/form/Index';
 
 Vue.use(Router);
 
@@ -53,6 +54,7 @@ const routes = [
   },
   {
     path: '/form',
+    component: FormIndex,
     redirect: '/form/index',
     hidden: true,
     meta: {
@@ -60,10 +62,52 @@ const routes = [
     },
     children: [
       {
-        path: 'easy',
-        component: (resolve) => require(['@/pages/form/Index'], resolve),
+        path: 'basic',
+        component: (resolve) => require(['@/pages/form/Basic'], resolve),
         meta: {
-          title: 'elsa-form',
+          title: '基础用法',
+        },
+      },
+      {
+        path: 'rule',
+        component: (resolve) => require(['@/pages/form/Rule'], resolve),
+        meta: {
+          title: '数据校验',
+        },
+      },
+      {
+        path: 'layout',
+        component: (resolve) => require(['@/pages/form/Layout'], resolve),
+        meta: {
+          title: '自定义布局',
+        },
+      },
+      {
+        path: 'select',
+        component: (resolve) => require(['@/pages/form/Select'], resolve),
+        meta: {
+          title: '下拉框和懒加载',
+        },
+      },
+      {
+        path: 'time',
+        component: (resolve) => require(['@/pages/form/Time'], resolve),
+        meta: {
+          title: '时间选择器',
+        },
+      },
+      {
+        path: 'upload',
+        component: (resolve) => require(['@/pages/form/Upload'], resolve),
+        meta: {
+          title: '文件上传',
+        },
+      },
+      {
+        path: 'relate',
+        component: (resolve) => require(['@/pages/form/Relate'], resolve),
+        meta: {
+          title: '联动关系',
         },
       },
     ],

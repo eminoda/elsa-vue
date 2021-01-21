@@ -1,5 +1,5 @@
 <template>
-  <div>form</div>
+  <router-view />
 </template>
 
 <script>
