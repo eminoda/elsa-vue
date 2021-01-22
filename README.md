@@ -195,20 +195,20 @@ export default {
 
 #### **ElsaForm.config**
 
-| 参数               | 说明                                                                                           | 类型    | 可选值                                                        | 默认值                  |
-| ------------------ | ---------------------------------------------------------------------------------------------- | ------- | ------------------------------------------------------------- | ----------------------- |
-| field              | 表单项字段，与 model 属性对应                                                                  | Object  |
-| field.label        | 名称                                                                                           | String  |
-| field.elTag        | element 表单标签                                                                               | String  | el-input/select/radio/cascader/date-picker/time-picker/upload |
-| field.elAttrs      | 表单项属性（参考 elTag 对应组件）                                                              | Object  |
-| field.elStyle      | 表单项 style 样式                                                                              | Object  |
-| field.extra        | 提示信息                                                                                       | String  |
-| field.extraIcon    | 提示信息 icon 图标                                                                             | String  |                                                               | el-icon-warning-outline |
-| field.rules        | [表单校验规则](https://element.eleme.cn/2.0/#/zh-CN/component/form#zi-ding-yi-xiao-yan-gui-ze) | Array   |
-| field.options      | 当为 check，select 作为数据展示                                                                | Array   |
-| field.visible      | 联动，可根据 model[filed] 来控制 **显示隐藏**                                                  | Boolean | String                                                        | Function({model})       |
-| field.customRender | 展示于 elTag 右侧的模板                                                                        | String  |
-| field.slotRender   | elTag 内部的模板（比如：upload 中的内容）                                                      | String  |
+| 参数               | 说明                                                                                           | 类型                             | 可选值                                                        | 默认值                  |
+| ------------------ | ---------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------------------- | ----------------------- |
+| field              | 表单项字段，与 model 属性对应                                                                  | Object                           |
+| field.label        | 名称                                                                                           | String                           |
+| field.elTag        | element 表单标签                                                                               | String                           | el-input/select/radio/cascader/date-picker/time-picker/upload |
+| field.elAttrs      | 表单项属性（参考 elTag 对应组件）                                                              | Object                           |
+| field.elStyle      | 表单项 style 样式                                                                              | Object                           |
+| field.extra        | 提示信息                                                                                       | String                           |
+| field.extraIcon    | 提示信息 icon 图标                                                                             | String                           |                                                               | el-icon-warning-outline |
+| field.rules        | [表单校验规则](https://element.eleme.cn/2.0/#/zh-CN/component/form#zi-ding-yi-xiao-yan-gui-ze) | Array                            |
+| field.options      | 当为 check，select 作为数据展示                                                                | Array                            |
+| field.visible      | 联动，可根据 model[filed] 来控制 **显示隐藏**                                                  | Boolean/String/Function({model}) |
+| field.customRender | 展示于 elTag 右侧的模板                                                                        | String                           |
+| field.slotRender   | elTag 内部的模板（比如：upload 中的内容）                                                      | String                           |
 
 更多详见：[el-form-item methods](https://element.eleme.cn/2.0/#/zh-CN/component/form#form-item-attributes)
 
@@ -235,11 +235,11 @@ export default {
 
 #### **ElsaForm.elProps**
 
-| 参数         | 说明             | 类型   | 可选值 | 默认值                |
-| ------------ | ---------------- | ------ | ------ | --------------------- |
-| label-width  | 表单域标签的宽度 | String |        |                       |
-| label-suffix | 表单域标签的后缀 | String |        |                       |
-| size         | 尺寸             | String |        | medium / small / mini |
+| 参数         | 说明             | 类型   | 可选值                | 默认值 |
+| ------------ | ---------------- | ------ | --------------------- | ------ |
+| label-width  | 表单域标签的宽度 | String |                       |        |
+| label-suffix | 表单域标签的后缀 | String |                       |        |
+| size         | 尺寸             | String | medium / small / mini |        |
 
 更多详见：[el-form attributes](https://element.eleme.cn/2.0/#/zh-CN/component/form#form-attributes)
 
