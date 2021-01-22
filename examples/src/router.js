@@ -1,133 +1,133 @@
-import Vue from 'vue';
-import Router from 'vue-router';
-import Layout from '@/layout/Index';
+import Vue from 'vue'
+import Router from 'vue-router'
+import Layout from '@/layout/Index.vue'
 
-Vue.use(Router);
+Vue.use(Router)
 
 const routes = [
   {
     path: '/',
     redirect: '/table/basic',
     meta: {
-      title: '首页',
-    },
+      title: '首页'
+    }
   },
   {
     path: '/table',
     component: Layout,
     meta: {
-      title: 'elsa-table 表格',
+      title: 'elsa-table 表格'
     },
     children: [
       {
         path: 'basic',
-        component: (resolve) => require(['@/pages/table/Basic'], resolve),
+        component: require('@/pages/table/Basic.vue').default,
         meta: {
-          title: '基础用法',
-        },
+          title: '基础用法'
+        }
       },
       {
         path: 'page',
-        component: (resolve) => require(['@/pages/table/Page'], resolve),
+        component: require('@/pages/table/Page.vue').default,
         meta: {
-          title: '分页组合',
-        },
+          title: '分页组合'
+        }
       },
       {
         path: 'customTemp',
-        component: (resolve) => require(['@/pages/table/CustomTemp'], resolve),
+        component: require('@/pages/table/CustomTemp.vue').default,
         meta: {
-          title: '自定义模板',
-        },
+          title: '自定义模板'
+        }
       },
       {
         path: 'tree',
-        component: (resolve) => require(['@/pages/table/Tree'], resolve),
+        component: require('@/pages/table/Tree.vue').default,
         meta: {
-          title: '树型数据与懒加载',
-        },
-      },
-    ],
+          title: '树型数据与懒加载'
+        }
+      }
+    ]
   },
   {
     path: '/form',
     component: Layout,
     meta: {
-      title: 'elsa-form 表单',
+      title: 'elsa-form 表单'
     },
     children: [
       {
         path: 'basic',
-        component: (resolve) => require(['@/pages/form/Basic'], resolve),
+        component: require('@/pages/form/Basic.vue').default,
         meta: {
-          title: '基础用法',
-        },
+          title: '基础用法'
+        }
       },
       {
         path: 'rule',
-        component: (resolve) => require(['@/pages/form/Rule'], resolve),
+        component: require('@/pages/form/Rule.vue').default,
         meta: {
-          title: '数据校验',
-        },
+          title: '数据校验'
+        }
       },
       {
         path: 'layout',
-        component: (resolve) => require(['@/pages/form/Layout'], resolve),
+        component: require('@/pages/form/Layout.vue').default,
         meta: {
-          title: '自定义布局',
-        },
+          title: '自定义布局'
+        }
       },
       {
         path: 'select',
-        component: (resolve) => require(['@/pages/form/Select'], resolve),
+        component: require('@/pages/form/Select.vue').default,
         meta: {
-          title: '下拉框和懒加载',
-        },
+          title: '下拉框和懒加载'
+        }
       },
       {
         path: 'time',
-        component: (resolve) => require(['@/pages/form/Time'], resolve),
+        component: require('@/pages/form/Time.vue').default,
         meta: {
-          title: '时间选择器',
-        },
+          title: '时间选择器'
+        }
       },
       {
         path: 'upload',
-        component: (resolve) => require(['@/pages/form/Upload'], resolve),
+        component: require('@/pages/form/Upload.vue').default,
         meta: {
-          title: '文件上传',
-        },
+          title: '文件上传'
+        }
       },
       {
         path: 'relate',
-        component: (resolve) => require(['@/pages/form/Relate'], resolve),
+        component: require('@/pages/form/Relate.vue').default,
         meta: {
-          title: '联动关系',
-        },
-      },
-    ],
+          title: '联动关系'
+        }
+      }
+    ]
   },
   {
     path: '/card',
     component: Layout,
     meta: {
-      title: 'elsa-card 卡片',
+      title: 'elsa-card 卡片'
     },
     children: [
       {
         path: 'basic',
-        component: (resolve) => require(['@/pages/card/Basic'], resolve),
+        component: require('@/pages/card/Basic.vue').default,
         meta: {
-          title: '基础用法',
-        },
-      },
-    ],
-  },
-];
+          title: '基础用法'
+        }
+      }
+    ]
+  }
+]
 export default new Router({
   mode: 'history',
   scrollBehavior: () => ({ y: 0 }),
-  routes,
-});
+  routes
+})
 
-export { routes };
+export { routes }

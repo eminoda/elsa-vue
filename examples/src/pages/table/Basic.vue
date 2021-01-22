@@ -24,7 +24,6 @@ export default {
       })
     },
     tableRowClassName({ row, rowIndex }) {
-      console.log(123)
       if (rowIndex === 1) {
         return 'warning-row'
       } else if (rowIndex === 3) {
