@@ -16,6 +16,11 @@
     "vue",
     "element-ui"
   ],
+  "files": [
+    "libs",
+    "examples",
+    "src"
+  ],
   "author": "eminoda",
   "license": "MIT",
   "bugs": {
