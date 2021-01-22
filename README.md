@@ -91,31 +91,42 @@ export default {
 
 ### **ElsaTable Attibutes**
 
-| 参数       | 说明                                                                                         | 类型   | 可选值 | 默认值 |
-| ---------- | -------------------------------------------------------------------------------------------- | ------ | ------ | ------ |
-| columns    | 列信息                                                                                       | Array  |
-| dataSource | 数据源                                                                                       | Array  |
-| pagination | 分页信息                                                                                     | Object |
-| ...elProps | [el-table attributes](https://element.eleme.cn/2.0/#/zh-CN/component/table#table-attributes) |
+| 参数       | 说明                      | 类型   | 可选值 | 默认值 |
+| ---------- | ------------------------- | ------ | ------ | ------ |
+| columns    | [列信息](#columns)        | Array  |        |        |
+| dataSource | 数据源                    | Array  |        |        |
+| pagination | 分页信息                  | Object |        |        |
+| ...elProps | [el-table 属性](#elProps) |        |        |        |
+
+#### **columns**
+
+| 参数                  | 说明                                                                  | 类型                             | 可选值                 | 默认值 |
+| --------------------- | --------------------------------------------------------------------- | -------------------------------- | ---------------------- | ------ |
+| type                  | selection 添加选择框列</br> index 添加序号列</br> expand 展示更多内容 | String                           | selection/index/expand |        |
+| label                 | 标题                                                                  | String                           |                        |        |
+| prop                  | 解析字段                                                              | String                           |                        |        |
+| width                 | 对应列的宽度                                                          | String                           |                        |        |
+| fixed                 | 列是否固定在左侧或者右侧，true 表示固定在左侧                         | String/Boolean                   | true, left, right      |        |
+| formatter             | 数据格式化                                                            | Function(row, column, cellValue) |                        |        |
+| show-overflow-tooltip | 当内容过长被隐藏时显示 tooltip                                        | Boolean                          |                        |        |
+
+更多详见：[el-table column](https://element.eleme.cn/2.0/#/zh-CN/component/table#table-column-attributes)
+
+#### **elProps**
+| 参数     | 说明               | 类型    | 可选值                | 默认值 |
+| -------- | ------------------ | ------- | --------------------- | ------ |
+| ~~data~~ | 以 dataSource 代替 |         |                       |        |
+| border   | 是否带有纵向边框   | Boolean |                       | false  |
+| size     | 尺寸               | String  | medium / small / mini |        |
+| fit      | 列的宽度是否自撑开 | Boolean |                       | true   |
+
+更多详见：[el-table attributes](https://element.eleme.cn/2.0/#/zh-CN/component/table#table-attributes)
 ### **ElsaTable Events**
 
 | 参数             | 说明                           | 类型                 | 可选值 | 默认值 |
 | ---------------- | ------------------------------ | -------------------- | ------ | ------ |
-| selection-change | 当选择项发生变化时会触发该事件 | Function(selections) |
+| selection-change | 当选择项发生变化时会触发该事件 | Function(selections) |        |        |
 
 更多详见：[el-table events](https://element.eleme.cn/2.0/#/zh-CN/component/table#table-events)
 
-😬注：部分 Events 根据现在文件结构实现较困难，未做 Demo 示例（比如：排序，过滤，合并表单...）。
-### config
-
-| 参数                  | 说明                                                                  | 类型                             | 可选值                 | 默认值 |
-| --------------------- | --------------------------------------------------------------------- | -------------------------------- | ---------------------- | ------ |
-| type                  | selection 添加选择框列</br> index 添加序号列</br> expand 展示更多内容 | String                           | selection/index/expand |
-| label                 | 标题                                                                  | String                           |
-| prop                  | 解析字段                                                              | String                           |
-| width                 | 对应列的宽度                                                          | String                           |
-| fixed                 | 列是否固定在左侧或者右侧，true 表示固定在左侧                         | String/Boolean                   | true, left, right      |
-| formatter             | 数据格式化                                                            | Function(row, column, cellValue) |
-| show-overflow-tooltip | 当内容过长被隐藏时显示 tooltip                                        | Boolean                          |
-
-更多详见：[el-table column](https://element.eleme.cn/2.0/#/zh-CN/component/table#table-column-attributes)
+😬注：部分 Events 根据现在文件结构实现较困难（比如：排序，过滤，合并表单...），可把 config 文件内容定义在 data 中来实现（而非 import 方式）
