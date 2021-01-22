@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import { fields } from './data/basicConfig';
+import { fields } from './data/basicConfig'
 export default {
   data() {
     return {
@@ -26,27 +26,27 @@ export default {
         company: [],
         desc: '',
         end: '',
-        skill: '',
-      },
-    };
+        skill: ''
+      }
+    }
   },
   methods: {
     submit() {
       this.$refs.myFormRef.validate((err, data) => {
         if (err) {
-          console.log(err);
-          this.$message.error('表单错误');
+          console.log(err)
+          this.$message.error('表单错误')
         } else {
-          console.log(data);
+          console.log(data)
         }
-      });
+      })
     },
     reset() {
-      this.$refs.myFormRef.resetFields();
-      this.$message.success('表单已重置');
-    },
-  },
-};
+      this.$refs.myFormRef.resetFields()
+      this.$message.success('表单已重置')
+    }
+  }
+}
 </script>
 
 <style></style>

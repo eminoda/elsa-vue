@@ -1,4 +1,4 @@
-let id = 0;
+let id = 0
 export const fields = {
   company: {
     label: '就职公司',
@@ -7,8 +7,8 @@ export const fields = {
     options: [
       { label: 'alibaba', value: 'alibaba' },
       { label: 'tencent', value: 'tencent' },
-      { label: 'baidu', value: 'baidu' },
-    ],
+      { label: 'baidu', value: 'baidu' }
+    ]
   },
   city: {
     label: '城市',
@@ -17,22 +17,22 @@ export const fields = {
     elAttrs: {},
     elAttrs: {
       isRemote: true,
-      remoteMethod: function(done, { model }) {
+      remoteMethod: function({ done, model }) {
         setTimeout(() => {
           done([
             { label: '上海', value: 'shanghai' },
-            { label: '北京', value: 'beijing' },
-          ]);
-        }, 500);
-      },
-    },
+            { label: '北京', value: 'beijing' }
+          ])
+        }, 500)
+      }
+    }
   },
   skill: {
     label: '技术栈',
     extra: '示例：多选',
     elTag: 'el-select',
     elAttrs: {
-      multiple: true,
+      multiple: true
     },
     options: [
       { label: 'angular', value: 'angular' },
@@ -40,8 +40,8 @@ export const fields = {
       { label: 'vue', value: 'vue' },
       { label: 'nodejs', value: 'nodejs' },
       { label: 'mysql', value: 'mysql' },
-      { label: 'java', value: 'java' },
-    ],
+      { label: 'java', value: 'java' }
+    ]
   },
   tree: {
     label: '树型数据',
@@ -52,18 +52,18 @@ export const fields = {
       props: {
         lazy: true,
         lazyLoad(node, resolve, { done }) {
-          const { level } = node;
+          const { level } = node
           setTimeout(() => {
-            const nodes = Array.from({ length: level + 1 }).map((item) => ({
+            const nodes = Array.from({ length: level + 1 }).map(item => ({
               value: ++id,
               label: `选项${id}`,
-              leaf: level >= 2,
-            }));
-            done(nodes);
-          }, 1000);
-        },
-      },
+              leaf: level >= 2
+            }))
+            done(nodes)
+          }, 1000)
+        }
+      }
     },
-    rules: [{ required: true, trigger: 'change' }],
-  },
-};
+    rules: [{ required: true, trigger: 'change' }]
+  }
+}
