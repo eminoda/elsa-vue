@@ -7,8 +7,8 @@ function resolve(dir) {
 }
 
 module.exports = {
+  publicPath: '/elsa',
   configureWebpack: {
-    publicPath: 'elsa',
     resolve: {
       alias: {
         main: resolve('../src/main'),
