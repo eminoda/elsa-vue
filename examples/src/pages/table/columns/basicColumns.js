@@ -9,11 +9,11 @@ export default [
     prop: 'title',
     width: '150',
     formatter(row) {
-      const titles = ['初级程序员', '中级程序员', '高级程序员'];
-      return titles[row.title];
-    },
+      const titles = ['初级程序员', '中级程序员', '高级程序员']
+      return titles[row.title]
+    }
   },
   { label: '身份证号', align: 'center', prop: 'idCard', width: '180' },
   { label: '出生日期', align: 'center', prop: 'date', width: '140' },
-  { label: '个人描述', align: 'center', prop: 'desc', align: 'left', showOverflowTooltip: true },
-];
+  { label: '个人描述', align: 'center', prop: 'desc', align: 'left', showOverflowTooltip: true }
+]

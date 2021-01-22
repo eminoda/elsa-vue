@@ -1,6 +1,6 @@
 <script>
-import { toHyphenateEvent } from '../utils';
-import { prefix } from '../config';
+import { toHyphenateEvent } from '../utils'
+import { prefix } from '../config'
 
 export default {
   name: `${prefix}-table`,
@@ -8,81 +8,78 @@ export default {
     columns: {
       type: Array,
       default() {
-        return [];
-      },
+        return []
+      }
     },
     dataSource: {
       type: Array,
       default() {
-        return [];
-      },
+        return []
+      }
     },
-    pagination: Object,
-    // https://element.eleme.io/#/zh-CN/component/table#table-attributes
-    border: Boolean,
-    height: [String, Number],
-    size: String,
-    rowKey: String,
-    treeProps: Object,
-    load: Function,
-    lazy: Boolean,
-    indent: Number,
-    fit: {
-      type: Boolean,
-      default: true,
-    },
+    pagination: Object
   },
   methods: {
     buildElColumnRender(column) {
-      const { customRender, ...rest } = column;
+      const { customRender, ...rest } = column
       if (customRender) {
         // 获取 <easy-table>...</easy-table> 内声明的非匿名插槽
-        const customRenderFn = this.$scopedSlots[customRender];
+        const customRenderFn = this.$scopedSlots[customRender]
         if (customRenderFn) {
           return this.$createElement('el-table-column', {
             props: rest,
             scopedSlots: {
               default: ({ row, column, $index }) => {
-                return customRenderFn({ row, column, $index });
-              },
-            },
-          });
+                return customRenderFn({ row, column, $index })
+              }
+            }
+          })
         } else {
-          console.warn(`未正确配置自定义 customRender 模板: ${customRender}`);
+          console.warn(`未正确配置自定义 customRender 模板: ${customRender}`)
         }
       }
-      return this.$createElement('el-table-column', { props: rest });
+      return this.$createElement('el-table-column', { props: rest })
     },
     renderTable() {
-      const { dataSource, columns, ...elProps } = this.$props;
-      elProps.data = dataSource;
+      const { dataSource, columns } = this.$props
+      // https://element.eleme.io/#/zh-CN/component/table#table-attributes
+      const elProps = this.$attrs
+      elProps.data = dataSource
 
       const tableRows = columns.reduce((acc, column) => {
-        acc.push(this.buildElColumnRender(column));
-        return acc;
-      }, []);
+        acc.push(this.buildElColumnRender(column))
+        return acc
+      }, [])
       return this.$createElement(
         'el-table',
         {
           props: elProps,
-          on: toHyphenateEvent(this.$listeners),
+          on: toHyphenateEvent(this.$listeners)
         },
         tableRows
-      );
+      )
     },
     renderPagination() {
       if (this.pagination) {
         return this.$createElement(`${prefix}-pagination`, {
-          props: this.pagination,
-        });
+          props: this.pagination
+        })
       }
-      return '';
-    },
+      return ''
+    }
   },
   render: function(h) {
-    return h('div', [this.renderTable(), this.renderPagination()]);
-  },
-};
+    return h('div', [this.renderTable(), this.renderPagination()])
+  }
+}
 </script>
 
-<style></style>
+<style>
+.el-table .warning-row {
+  background: oldlace;
+}
+
+.el-table .success-row {
+  background: #f0f9eb;
+}
+</style>
