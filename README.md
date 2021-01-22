@@ -197,7 +197,7 @@ export default {
 
 | 参数               | 说明                                                                                           | 类型                             | 可选值                                                        | 默认值                  |
 | ------------------ | ---------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------------------- | ----------------------- |
-| field              | 表单项字段，与 model 属性对应                                                                  | Object                           |
+| field              | [表单项字段，与 model 属性对](#ElsaForm.field.elAttrs)应                                       | Object                           |
 | field.label        | 名称                                                                                           | String                           |
 | field.elTag        | element 表单标签                                                                               | String                           | el-input/select/radio/cascader/date-picker/time-picker/upload |
 | field.elAttrs      | 表单项属性（参考 elTag 对应组件）                                                              | Object                           |
@@ -212,7 +212,7 @@ export default {
 
 更多详见：[el-form-item methods](https://element.eleme.cn/2.0/#/zh-CN/component/form#form-item-attributes)
 
-#### **field.elAttrs**
+#### **ElsaForm.field.elAttrs**
 
 示例一些特殊属性
 
@@ -245,10 +245,10 @@ export default {
 
 ### **ElsaForm Methods**
 
-| 参数          | 说明         | 类型                 | 可选值   | 默认值 |
-| ------------- | ------------ | -------------------- | -------- | ------ |
-| validate      | 表单数据校验 | Function(err,model)  |
-| resetFields   | 重置表单项   | Function(props<Array | String>) |
-| clearValidate | 校验结果清空 | Function(props<Array | String>) |
+| 参数          | 说明         | 类型                             | 可选值 | 默认值 |
+| ------------- | ------------ | -------------------------------- | ------ | ------ |
+| validate      | 表单数据校验 | Function(err,model)              |
+| resetFields   | 重置表单项   | Function(props<Array \| String>) |
+| clearValidate | 校验结果清空 | Function(props<Array \| String>) |
 
 更多详见：[el-form methods](https://element.eleme.cn/2.0/#/zh-CN/component/form#form-methods)
