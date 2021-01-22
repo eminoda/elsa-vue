@@ -1,7 +1,6 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import TableIndex from '@/pages/table/Index';
-import FormIndex from '@/pages/form/Index';
+import Layout from '@/layout/Index';
 
 Vue.use(Router);
 
@@ -15,11 +14,9 @@ const routes = [
   },
   {
     path: '/table',
-    component: TableIndex,
-    redirect: '/table/basic',
-    hidden: true,
+    component: Layout,
     meta: {
-      title: 'elsa-table',
+      title: 'elsa-table 表格',
     },
     children: [
       {
@@ -54,11 +51,9 @@ const routes = [
   },
   {
     path: '/form',
-    component: FormIndex,
-    redirect: '/form/index',
-    hidden: true,
+    component: Layout,
     meta: {
-      title: 'elsa-form',
+      title: 'elsa-form 表单',
     },
     children: [
       {
@@ -108,6 +103,22 @@ const routes = [
         component: (resolve) => require(['@/pages/form/Relate'], resolve),
         meta: {
           title: '联动关系',
+        },
+      },
+    ],
+  },
+  {
+    path: '/card',
+    component: Layout,
+    meta: {
+      title: 'elsa-card 卡片',
+    },
+    children: [
+      {
+        path: 'basic',
+        component: (resolve) => require(['@/pages/card/Basic'], resolve),
+        meta: {
+          title: '基础用法',
         },
       },
     ],

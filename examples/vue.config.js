@@ -8,7 +8,7 @@ function resolve(dir) {
 
 const isDev = process.env.NODE_ENV == 'development';
 module.exports = {
-  publicPath: isDev ? '' : '/elsa',
+  publicPath: isDev ? '/' : '/elsa',
   outputDir: resolve('dist'),
   configureWebpack: {
     resolve: {
