@@ -8,7 +8,7 @@ Vue.use(Router);
 const routes = [
   {
     path: '/',
-    redirect: '/table/index',
+    redirect: '/table/basic',
     meta: {
       title: '首页',
     },

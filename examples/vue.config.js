@@ -6,8 +6,10 @@ function resolve(dir) {
   return path.join(__dirname, dir);
 }
 
+const isDev = process.env.NODE_ENV == 'development';
 module.exports = {
-  publicPath: '/elsa',
+  publicPath: isDev ? '' : '/elsa',
+  outputDir: resolve('dist'),
   configureWebpack: {
     resolve: {
       alias: {
