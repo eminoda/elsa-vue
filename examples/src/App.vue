@@ -2,7 +2,7 @@
   <div id="app">
     <el-container>
       <!-- <el-header> </el-header> -->
-      <el-aside>
+      <el-aside style="width:200px;">
         <el-menu router :default-active="activeIndex" class="el-menu-demo">
           <template v-for="(route, index) in routes">
             <el-submenu v-if="route.children && route.children.length > 0" :key="index" :index="route.path">

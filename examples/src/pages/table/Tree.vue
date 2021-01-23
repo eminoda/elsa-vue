@@ -1,16 +1,19 @@
 <template>
-  <elsa-table
-    row-key="id"
-    default-expand-all
-    lazy
-    :indent="20"
-    :load="load"
-    :tree-props="{ children: 'children', hasChildren: 'hasChildren' }"
-    v-loading="loading"
-    :columns="columns"
-    :dataSource="dataSource"
-    :pagination="pagination"
-  ></elsa-table>
+  <div>
+    <h2>树形数据和懒加载</h2>
+    <elsa-table
+      row-key="id"
+      default-expand-all
+      lazy
+      :indent="20"
+      :load="load"
+      :tree-props="{ children: 'children', hasChildren: 'hasChildren' }"
+      v-loading="loading"
+      :columns="columns"
+      :dataSource="dataSource"
+      :pagination="pagination"
+    ></elsa-table>
+  </div>
 </template>
 
 <script>
