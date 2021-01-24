@@ -5,10 +5,10 @@ export const fields = {
     elTag: 'el-input',
     elAttrs: {
       placeholder: '请输入用户名',
-      clearable: true,
+      clearable: true
     },
     elStyle: {
-      width: '80%',
+      width: '80%'
     },
     customRender: 'nameCheck',
     rules: [
@@ -16,14 +16,14 @@ export const fields = {
       {
         validator: (rule, value, callback) => {
           if (value == 'eminoda') {
-            callback(new Error('用户名重复'));
+            callback(new Error('用户名重复'))
           } else {
-            callback();
+            callback()
           }
         },
-        trigger: 'change',
-      },
-    ],
+        trigger: 'change'
+      }
+    ]
   },
   password: {
     label: '密码',
@@ -31,12 +31,12 @@ export const fields = {
     elTag: 'el-input',
     elAttrs: {
       type: 'password',
-      showPassword: true,
+      showPassword: true
     },
     rules: [
       { required: true, message: '密码不能为空', trigger: 'change' },
-      { pattern: /^[A-Za-z0-9]{10,16}$/, message: '密码输入格式错误', trigger: 'change' },
-    ],
+      { pattern: /^[A-Za-z0-9]{10,16}$/, message: '密码输入格式错误', trigger: 'change' }
+    ]
   },
   desc: {
     label: '个人描述',
@@ -44,8 +44,8 @@ export const fields = {
     extra: '示例：强校验',
     elAttrs: {
       type: 'textarea',
-      rows: 3,
+      rows: 3
     },
-    rules: [{ required: true, message: '个人描述不能为空', trigger: 'change' }],
-  },
-};
+    rules: [{ required: true, message: '个人描述不能为空', trigger: 'change' }]
+  }
+}

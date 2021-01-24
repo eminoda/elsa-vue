@@ -19,11 +19,11 @@ export default {
       fields,
       layout,
       model: {
-        name: '123',
+        name: '',
         age: '',
-        idCard: '123',
-        end: '1',
-        skill: 'angular',
+        idCard: '',
+        end: '',
+        skill: '',
       },
     };
   },

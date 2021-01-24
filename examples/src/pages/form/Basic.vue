@@ -32,6 +32,7 @@ export default {
   },
   methods: {
     submit() {
+      // data is this.model
       this.$refs.myFormRef.validate((err, data) => {
         if (err) {
           console.log(err)
@@ -43,6 +44,7 @@ export default {
     },
     reset() {
       this.$refs.myFormRef.resetFields()
+      // this.$refs.myFormRef.resetFields(['name','password'])
       this.$message.success('表单已重置')
     }
   }
