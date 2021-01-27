@@ -1,12 +1,15 @@
 <template>
-  <elsa-table v-loading="loading" :columns="columns" :dataSource="dataSource" :pagination="pagination">
-    <template slot="more" slot-scope="scope">
-      <div>{{ scope.row.name }} is {{ scope.row.age }} 岁</div>
-    </template>
-    <div slot="action" slot-scope="scope">
-      <el-button type="primary" size="small" @click="handleAdd(scope.row)">查看</el-button>
-    </div>
-  </elsa-table>
+  <div>
+    <h2>自定义模板</h2>
+    <elsa-table v-loading="loading" :columns="columns" :dataSource="dataSource" :pagination="pagination">
+      <template slot="more" slot-scope="scope">
+        <div>{{ scope.row.name }} is {{ scope.row.age }} 岁</div>
+      </template>
+      <div slot="action" slot-scope="scope">
+        <el-button type="primary" size="small" @click="handleAdd(scope.row)">查看</el-button>
+      </div>
+    </elsa-table>
+  </div>
 </template>
 
 <script>

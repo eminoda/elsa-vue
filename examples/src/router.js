@@ -41,6 +41,13 @@ const routes = [
         }
       },
       {
+        path: 'elAttrs',
+        component: require('@/pages/table/ElAttrs.vue').default,
+        meta: {
+          title: 'el-table 支持性'
+        }
+      },
+      {
         path: 'tree',
         component: require('@/pages/table/Tree.vue').default,
         meta: {
