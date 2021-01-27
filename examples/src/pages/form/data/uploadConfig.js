@@ -1,11 +1,13 @@
-import { Message } from 'element-ui';
+import { Message } from 'element-ui'
 import request from '@/utils/request'
 
 export const fields = {
   filePath: {
     label: '上传文件',
     elTag: 'el-upload',
-    slotRender: 'upload',
+    elSlots: {
+      default: 'upload'
+    },
     elClass: 'upload-wrap',
     elAttrs: {
       action: 'https://jsonplaceholder.typicode.com/posts/',
@@ -16,34 +18,34 @@ export const fields = {
         // console.log(file, fileList)
       },
       onSuccess(response, file, fileList, { done }) {
-        done('filePath');
+        done('filePath')
       },
       onError(err, file, fileList) {
-        Message.error(err.message);
+        Message.error(err.message)
       },
       onProgress(event, file, fileList) {
-        event.percent = parseInt(Math.round((event.loaded / event.total) * 100));
+        event.percent = parseInt(Math.round((event.loaded / event.total) * 100))
       },
       httpRequest({ action, data, file, filename, headers, onError, onProgress, onSuccess, withCredentials }) {
-        let formData = new FormData();
-        formData.append('file', file);
+        let formData = new FormData()
+        formData.append('file', file)
 
         request({
           url: 'https://www.mocky.io/v2/5cc8019d300000980a055e76',
           method: 'post',
           data: formData,
           onUploadProgress(progressEvent) {
-            onProgress(progressEvent);
-          },
+            onProgress(progressEvent)
+          }
         })
-          .then((response) => {
-            onSuccess(response);
+          .then(response => {
+            onSuccess(response)
           })
-          .catch((err) => {
-            onError(err);
-          });
-      },
+          .catch(err => {
+            onError(err)
+          })
+      }
     },
-    rules: [{ required: true }],
-  },
-};
+    rules: [{ required: true }]
+  }
+}

@@ -184,9 +184,9 @@ export default {
       return null
     },
     getSlotRender(field) {
-      const { slotRender } = this.config[field]
-      if (this.$scopedSlots && this.$scopedSlots[slotRender]) {
-        return this.$scopedSlots[slotRender]
+      const { elSlots } = this.config[field]
+      if (elSlots && Object.keys(elSlots).length > 0 && this.$scopedSlots) {
+        return this.$scopedSlots
       }
       return null
     },
@@ -203,7 +203,7 @@ export default {
           value: this.getPathValue(field),
           fieldOptions: this.config[field],
           model: this.elFormOptions.model,
-          scopedSlotsFn: this.getSlotRender(field)
+          scopedSlots: this.getSlotRender(field)
         },
         on: {
           change: value => {
@@ -265,7 +265,7 @@ export default {
     }
   },
   render(h) {
-    console.log(this.elFormOptions)
+    // console.log(this.elFormOptions)
     return h(
       'el-form',
       {

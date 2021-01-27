@@ -5,6 +5,9 @@
         <template slot="nameCheck">
           <el-button type="primary" size="small" style="margin-left:10px;">校验</el-button>
         </template>
+        <template slot="name-icon">
+          Http://
+        </template>
         <el-row type="flex" justify="center">
           <el-button @click="submit" type="primary">提交</el-button>
           <el-button @click="reset" type="warning" style="margin-left:10px;">重置</el-button>

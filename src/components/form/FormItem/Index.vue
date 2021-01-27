@@ -15,7 +15,7 @@ export default {
     },
     value: [Number, String, Array, Date],
     field: String,
-    scopedSlotsFn: Function,
+    scopedSlots: Object,
     disabled: Boolean
   },
   data() {
@@ -31,6 +31,9 @@ export default {
     },
     elStyle() {
       return this.fieldOptions.elStyle || {}
+    },
+    elSlots() {
+      return this.fieldOptions.elSlots || {}
     }
   },
   methods: {
@@ -131,6 +134,30 @@ export default {
         }
       }
     },
+    renderSlots() {
+      if (this.scopedSlots) {
+        const slots = []
+        for (let soltName in this.elSlots) {
+          const customSlotName = this.elSlots[soltName]
+          if (this.scopedSlots[customSlotName]) {
+            slots.push(
+              this.$createElement(
+                'div',
+                {
+                  slot: soltName
+                },
+                [this.scopedSlots[customSlotName]({ model: this.model })]
+              )
+            )
+          } else {
+            console.warn(`未配置 elSlots.${soltName} 对应的 ${customSlotName} 模板`)
+          }
+        }
+        return slots
+      } else {
+        return []
+      }
+    },
     renderByTag(h) {
       const { elTag, elClass } = this.fieldOptions
       const standardTag = this._normalizeElTag(elTag)
@@ -144,7 +171,7 @@ export default {
             value: this.value,
             fieldOptions: this.fieldOptions,
             model: this.model,
-            scopedSlotsFn: this.scopedSlotsFn,
+            scopedSlots: this.scopedSlots,
             disabled: this.disabled || this._disabledFormItem(this.field)
           },
           attrs: {
@@ -167,6 +194,7 @@ export default {
             loading: this.loading,
             value: this.value,
             props: this.elAttrs.props,
+            scopedSlots: this.scopedSlots,
             disabled: this.disabled || this._disabledFormItem(this.field)
           },
           attrs: {
@@ -185,7 +213,7 @@ export default {
             }
           }
         },
-        [this.renderOptions(standardTag)]
+        [...this.renderSlots(), this.renderOptions(standardTag)]
       )
     }
   },
