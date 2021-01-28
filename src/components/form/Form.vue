@@ -209,9 +209,11 @@ export default {
           change: value => {
             // this.elFormOptions.model[field] = value
             this.setPathValue(field, value)
+            const model = this.elFormOptions.model
             if (changeMethod) {
-              changeMethod.bind(this)({ value, model: this.elFormOptions.model, field, rules: this.rules })
+              changeMethod.bind(this)({ value, model, field, rules: this.rules })
             }
+            this.$emit('change', { model, field, value })
           }
         }
       })

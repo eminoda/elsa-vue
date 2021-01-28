@@ -1,7 +1,7 @@
 <template>
   <el-row type="flex" justify="center">
     <el-col :span="12">
-      <elsa-form ref="myFormRef" :config="fields" :model="model" labelWidth="auto" label-suffix=":">
+      <elsa-form ref="myFormRef" :config="fields" :model="model" labelWidth="auto" label-suffix=":" @change="handleChange">
         <template slot="nameCheck">
           <el-button type="primary" size="small" style="margin-left:10px;">校验</el-button>
         </template>
@@ -49,6 +49,9 @@ export default {
       this.$refs.myFormRef.resetFields()
       // this.$refs.myFormRef.resetFields(['name','password'])
       this.$message.success('表单已重置')
+    },
+    handleChange(data) {
+      console.log(data)
     }
   }
 }
