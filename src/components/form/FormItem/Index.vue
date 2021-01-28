@@ -225,6 +225,8 @@ export default {
     const { options } = this.fieldOptions
     if (Array.isArray(options)) {
       this.options = options
+    } else {
+      this.lazyRemoteLoad()
     }
   }
 }
