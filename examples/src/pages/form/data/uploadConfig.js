@@ -12,7 +12,7 @@ export const fields = {
     elAttrs: {
       action: '',
       beforeUpload(file) {
-        console.log(123333)
+        Message.error('文件不合法')
         return false
       },
       onChange(file, fileList) {
