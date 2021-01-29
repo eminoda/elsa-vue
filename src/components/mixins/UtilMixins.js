@@ -9,7 +9,7 @@ export default {
       Object.keys(elAttrs).forEach(prop => {
         if (is.function(elAttrs[prop])) {
           events[prop] = (...args) => {
-            elAttrs[prop](...args, { model: this.model, ...options })
+            return elAttrs[prop](...args, { model: this.model, ...options })
           }
         }
       })

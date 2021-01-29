@@ -10,9 +10,10 @@ export const fields = {
     },
     elClass: 'upload-wrap',
     elAttrs: {
-      action: 'https://jsonplaceholder.typicode.com/posts/',
+      action: '',
       beforeUpload(file) {
-        // return false
+        console.log(123333)
+        return false
       },
       onChange(file, fileList) {
         // console.log(file, fileList)
@@ -31,7 +32,7 @@ export const fields = {
         formData.append('file', file)
 
         request({
-          url: 'https://www.mocky.io/v2/5cc8019d300000980a055e76',
+          url: '/api/upload',
           method: 'post',
           data: formData,
           onUploadProgress(progressEvent) {

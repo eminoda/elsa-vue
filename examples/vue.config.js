@@ -30,6 +30,21 @@ module.exports = {
           vue: 'Vue',
           'vue-router': 'VueRouter',
           'element-ui': 'ELEMENT'
+        },
+    devServer: {
+      host: '0.0.0.0',
+      open: true,
+      proxy: {
+        // detail: https://cli.vuejs.org/config/#devserver-proxy
+        ['/api']: {
+          target: `http://127.0.0.1:3000`,
+          changeOrigin: true,
+          pathRewrite: {
+            '^/api': ''
+          }
         }
+      },
+      disableHostCheck: true
+    }
   }
 }
