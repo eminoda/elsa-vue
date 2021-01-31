@@ -846,20 +846,18 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 /* harmony default export */ var UtilMixins = ({
   methods: {
     mixinElAttrsEvents: function mixinElAttrsEvents(isHyphenate) {
-      var _this = this;
-
       var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
       var elAttrs = this.fieldOptions.elAttrs;
       var events = {};
       Object.keys(elAttrs).forEach(function (prop) {
         if (external_is_type_of_default.a["function"](elAttrs[prop])) {
-          events[prop] = function () {
+          events[prop] = function mixinWrap() {
             for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
               args[_key] = arguments[_key];
             }
 
-            elAttrs[prop].apply(elAttrs, args.concat([_objectSpread({
-              model: _this.model
+            return elAttrs[prop].apply(elAttrs, args.concat([_objectSpread({
+              model: this.model
             }, options)]));
           };
         }
@@ -874,6 +872,18 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
   }
 });
 // CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/form/FormItem/Upload.vue?vue&type=script&lang=js&
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
 function Uploadvue_type_script_lang_js_ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
 function Uploadvue_type_script_lang_js_objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { Uploadvue_type_script_lang_js_ownKeys(Object(source), true).forEach(function (key) { Uploadvue_type_script_lang_js_defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { Uploadvue_type_script_lang_js_ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
@@ -902,7 +912,18 @@ function Uploadvue_type_script_lang_js_objectWithoutPropertiesLoose(source, excl
     value: [Number, String, Array, Date],
     field: String,
     disabled: Boolean,
-    scopedSlotsFn: Function
+    scopedSlots: Object
+  },
+  computed: {
+    elAttrs: function elAttrs() {
+      return this.fieldOptions.elAttrs || {};
+    },
+    elStyle: function elStyle() {
+      return this.fieldOptions.elStyle || {};
+    },
+    elSlots: function elSlots() {
+      return this.fieldOptions.elSlots || {};
+    }
   },
   methods: {
     uploadEventsMixins: function uploadEventsMixins() {
@@ -915,6 +936,29 @@ function Uploadvue_type_script_lang_js_objectWithoutPropertiesLoose(source, excl
       return this.mixinElAttrsEvents(false, {
         done: done
       });
+    },
+    renderSlots: function renderSlots() {
+      if (this.scopedSlots) {
+        var slots = [];
+
+        for (var soltName in this.elSlots) {
+          var customSlotName = this.elSlots[soltName];
+
+          if (this.scopedSlots[customSlotName]) {
+            slots.push(this.$createElement('div', {
+              slot: soltName
+            }, [this.scopedSlots[customSlotName]({
+              model: this.model
+            })]));
+          } else {
+            console.warn("\u672A\u914D\u7F6E elSlots.".concat(soltName, " \u5BF9\u5E94\u7684 ").concat(customSlotName, " \u6A21\u677F"));
+          }
+        }
+
+        return slots;
+      } else {
+        return [];
+      }
     }
   },
   render: function render(h) {
@@ -932,9 +976,7 @@ function Uploadvue_type_script_lang_js_objectWithoutPropertiesLoose(source, excl
     return h(elTag, {
       props: Uploadvue_type_script_lang_js_objectSpread(Uploadvue_type_script_lang_js_objectSpread(Uploadvue_type_script_lang_js_objectSpread({}, elProps), elAttrs), this.uploadEventsMixins()),
       "class": elClass
-    }, [this.scopedSlotsFn({
-      model: this.model
-    })]);
+    }, _toConsumableArray(this.renderSlots()));
   }
 });
 // CONCATENATED MODULE: ./src/components/form/FormItem/Upload.vue?vue&type=script&lang=js&
@@ -1197,6 +1239,18 @@ if (false) { var Picker_api; }
 Picker_component.options.__file = "src/components/form/FormItem/Picker.vue"
 /* harmony default export */ var Picker = (Picker_component.exports);
 // CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/form/FormItem/Index.vue?vue&type=script&lang=js&
+function Indexvue_type_script_lang_js_toConsumableArray(arr) { return Indexvue_type_script_lang_js_arrayWithoutHoles(arr) || Indexvue_type_script_lang_js_iterableToArray(arr) || Indexvue_type_script_lang_js_unsupportedIterableToArray(arr) || Indexvue_type_script_lang_js_nonIterableSpread(); }
+
+function Indexvue_type_script_lang_js_nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function Indexvue_type_script_lang_js_unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return Indexvue_type_script_lang_js_arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return Indexvue_type_script_lang_js_arrayLikeToArray(o, minLen); }
+
+function Indexvue_type_script_lang_js_iterableToArray(iter) { if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter); }
+
+function Indexvue_type_script_lang_js_arrayWithoutHoles(arr) { if (Array.isArray(arr)) return Indexvue_type_script_lang_js_arrayLikeToArray(arr); }
+
+function Indexvue_type_script_lang_js_arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
 function Indexvue_type_script_lang_js_ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
 function Indexvue_type_script_lang_js_objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { Indexvue_type_script_lang_js_ownKeys(Object(source), true).forEach(function (key) { Indexvue_type_script_lang_js_defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { Indexvue_type_script_lang_js_ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
@@ -1225,7 +1279,7 @@ function Indexvue_type_script_lang_js_defineProperty(obj, key, value) { if (key 
     },
     value: [Number, String, Array, Date],
     field: String,
-    scopedSlotsFn: Function,
+    scopedSlots: Object,
     disabled: Boolean
   },
   data: function data() {
@@ -1241,6 +1295,9 @@ function Indexvue_type_script_lang_js_defineProperty(obj, key, value) { if (key 
     },
     elStyle: function elStyle() {
       return this.fieldOptions.elStyle || {};
+    },
+    elSlots: function elSlots() {
+      return this.fieldOptions.elSlots || {};
     }
   },
   methods: {
@@ -1374,6 +1431,29 @@ function Indexvue_type_script_lang_js_defineProperty(obj, key, value) { if (key 
         }
       }
     },
+    renderSlots: function renderSlots() {
+      if (this.scopedSlots) {
+        var slots = [];
+
+        for (var soltName in this.elSlots) {
+          var customSlotName = this.elSlots[soltName];
+
+          if (this.scopedSlots[customSlotName]) {
+            slots.push(this.$createElement('div', {
+              slot: soltName
+            }, [this.scopedSlots[customSlotName]({
+              model: this.model
+            })]));
+          } else {
+            console.warn("\u672A\u914D\u7F6E elSlots.".concat(soltName, " \u5BF9\u5E94\u7684 ").concat(customSlotName, " \u6A21\u677F"));
+          }
+        }
+
+        return slots;
+      } else {
+        return [];
+      }
+    },
     renderByTag: function renderByTag(h) {
       var _this4 = this;
 
@@ -1395,7 +1475,7 @@ function Indexvue_type_script_lang_js_defineProperty(obj, key, value) { if (key 
             value: this.value,
             fieldOptions: this.fieldOptions,
             model: this.model,
-            scopedSlotsFn: this.scopedSlotsFn,
+            scopedSlots: this.scopedSlots,
             disabled: this.disabled || this._disabledFormItem(this.field)
           },
           attrs: Indexvue_type_script_lang_js_objectSpread(Indexvue_type_script_lang_js_objectSpread({}, this.elAttrs), {}, {
@@ -1415,6 +1495,7 @@ function Indexvue_type_script_lang_js_defineProperty(obj, key, value) { if (key 
           loading: this.loading,
           value: this.value,
           props: this.elAttrs.props,
+          scopedSlots: this.scopedSlots,
           disabled: this.disabled || this._disabledFormItem(this.field)
         }),
         attrs: Indexvue_type_script_lang_js_objectSpread(Indexvue_type_script_lang_js_objectSpread({}, this.elAttrs), {}, {
@@ -1431,7 +1512,7 @@ function Indexvue_type_script_lang_js_defineProperty(obj, key, value) { if (key 
             }
           }
         }
-      }, [this.renderOptions(standardTag)]);
+      }, [].concat(Indexvue_type_script_lang_js_toConsumableArray(this.renderSlots()), [this.renderOptions(standardTag)]));
     }
   },
   render: function render(h) {
@@ -1443,6 +1524,8 @@ function Indexvue_type_script_lang_js_defineProperty(obj, key, value) { if (key 
 
     if (Array.isArray(options)) {
       this.options = options;
+    } else {
+      this.lazyRemoteLoad();
     }
   }
 });
@@ -1472,19 +1555,19 @@ if (false) { var Index_api; }
 Index_component.options.__file = "src/components/form/FormItem/Index.vue"
 /* harmony default export */ var Index = (Index_component.exports);
 // CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/form/Form.vue?vue&type=script&lang=js&
-function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
+function Formvue_type_script_lang_js_toConsumableArray(arr) { return Formvue_type_script_lang_js_arrayWithoutHoles(arr) || Formvue_type_script_lang_js_iterableToArray(arr) || Formvue_type_script_lang_js_unsupportedIterableToArray(arr) || Formvue_type_script_lang_js_nonIterableSpread(); }
 
-function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function Formvue_type_script_lang_js_nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
 
-function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter); }
+function Formvue_type_script_lang_js_iterableToArray(iter) { if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter); }
 
-function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
+function Formvue_type_script_lang_js_arrayWithoutHoles(arr) { if (Array.isArray(arr)) return Formvue_type_script_lang_js_arrayLikeToArray(arr); }
 
-function _createForOfIteratorHelper(o, allowArrayLike) { var it; if (typeof Symbol === "undefined" || o[Symbol.iterator] == null) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = o[Symbol.iterator](); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
+function _createForOfIteratorHelper(o, allowArrayLike) { var it; if (typeof Symbol === "undefined" || o[Symbol.iterator] == null) { if (Array.isArray(o) || (it = Formvue_type_script_lang_js_unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = o[Symbol.iterator](); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
 
-function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+function Formvue_type_script_lang_js_unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return Formvue_type_script_lang_js_arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return Formvue_type_script_lang_js_arrayLikeToArray(o, minLen); }
 
-function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+function Formvue_type_script_lang_js_arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
 
 function Formvue_type_script_lang_js_ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
@@ -1735,10 +1818,10 @@ function Formvue_type_script_lang_js_objectWithoutPropertiesLoose(source, exclud
       return null;
     },
     getSlotRender: function getSlotRender(field) {
-      var slotRender = this.config[field].slotRender;
+      var elSlots = this.config[field].elSlots;
 
-      if (this.$scopedSlots && this.$scopedSlots[slotRender]) {
-        return this.$scopedSlots[slotRender];
+      if (elSlots && Object.keys(elSlots).length > 0 && this.$scopedSlots) {
+        return this.$scopedSlots;
       }
 
       return null;
@@ -1762,21 +1845,29 @@ function Formvue_type_script_lang_js_objectWithoutPropertiesLoose(source, exclud
           value: this.getPathValue(field),
           fieldOptions: this.config[field],
           model: this.elFormOptions.model,
-          scopedSlotsFn: this.getSlotRender(field)
+          scopedSlots: this.getSlotRender(field)
         },
         on: {
           change: function change(value) {
             // this.elFormOptions.model[field] = value
             _this3.setPathValue(field, value);
 
+            var model = _this3.elFormOptions.model;
+
             if (changeMethod) {
               changeMethod.bind(_this3)({
                 value: value,
-                model: _this3.elFormOptions.model,
+                model: model,
                 field: field,
                 rules: _this3.rules
               });
             }
+
+            _this3.$emit('change', {
+              model: model,
+              field: field,
+              value: value
+            });
           }
         }
       });
@@ -1862,12 +1953,12 @@ function Formvue_type_script_lang_js_objectWithoutPropertiesLoose(source, exclud
     }
   },
   render: function render(h) {
-    console.log(this.elFormOptions);
+    // console.log(this.elFormOptions)
     return h('el-form', {
       props: this.elFormOptions,
       on: toHyphenateEvent(this.$listeners),
       ref: 'elFormRef'
-    }, [].concat(_toConsumableArray(this.drawLayout(this.layout)), _toConsumableArray(this.renderActionBar())));
+    }, [].concat(Formvue_type_script_lang_js_toConsumableArray(this.drawLayout(this.layout)), Formvue_type_script_lang_js_toConsumableArray(this.renderActionBar())));
   }
 });
 // CONCATENATED MODULE: ./src/components/form/Form.vue?vue&type=script&lang=js&
