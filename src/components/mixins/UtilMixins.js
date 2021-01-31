@@ -8,7 +8,7 @@ export default {
       const events = {}
       Object.keys(elAttrs).forEach(prop => {
         if (is.function(elAttrs[prop])) {
-          events[prop] = (...args) => {
+          events[prop] = function mixinWrap(...args) {
             return elAttrs[prop](...args, { model: this.model, ...options })
           }
         }
