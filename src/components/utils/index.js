@@ -9,13 +9,16 @@ export function cached(fn) {
 }
 
 const hyphenateRE = /\B([A-Z])/g
-export const hyphenate = cached(str => {
+export const hyphenate = cached((str) => {
   return str.replace(hyphenateRE, '-$1').toLowerCase()
 })
 
 export function toHyphenateEvent(listeners) {
   const eventListeners = {}
   for (let eventName in listeners) {
+    if (!listeners[eventName]) {
+      continue
+    }
     const kebabCaseEventName = hyphenate(eventName)
     if (kebabCaseEventName != eventName) {
       listeners[kebabCaseEventName] = listeners[eventName]
