@@ -10,6 +10,17 @@ const isDev = process.env.NODE_ENV == 'development'
 module.exports = {
   publicPath: isDev ? '/' : '/elsa',
   outputDir: resolve('dist'),
+  chainWebpack: config => {
+    config.module
+      .rule('markdown-loader')
+      .test(/\.md$/)
+      .use('markdown-loader')
+      .loader(path.join(__dirname, 'build/markdown-loader'))
+      .end()
+      .use('vue-loader')
+      .loader('vue-loader')
+      .end()
+  },
   configureWebpack: {
     resolve: {
       extensions: ['.mjs', '.js', '.jsx', '.vue', '.json', '.wasm'],

@@ -12,6 +12,7 @@
     "core-js": "^3.6.5",
     "element-ui": "^2.15.0",
     "is-type-of": "^1.2.1",
+    "markdown-it": "^12.0.4",
     "mockjs": "^1.1.0",
     "moment": "^2.29.1",
     "path": "^0.12.7",
