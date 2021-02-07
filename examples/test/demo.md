@@ -1,26 +1,24 @@
 # 标题
 
-文字内容
+一些文字
 
 :::demo
 
 ```html
 <template>
-  <div @click="handleAdd">
-    vue 标题 {{test}}
-  </div>
+  <div>{{test}}</div>
 </template>
 <script>
   export default {
     data() {
       return {
-        test: 1
+        test: 'hello test'
       }
     },
     methods: {
-      handleAdd() {
-        this.test = ++this.test
+      handleTest() {
         console.log(this.test)
+        this.test = 'test change'
       }
     }
   }

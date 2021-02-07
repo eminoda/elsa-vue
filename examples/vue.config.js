@@ -14,11 +14,11 @@ module.exports = {
     config.module
       .rule('markdown-loader')
       .test(/\.md$/)
-      .use('markdown-loader')
-      .loader(path.join(__dirname, 'build/markdown-loader'))
-      .end()
       .use('vue-loader')
       .loader('vue-loader')
+      .end()
+      .use('markdown-loader')
+      .loader(path.join(__dirname, 'build/markdown-loader'))
       .end()
   },
   configureWebpack: {

@@ -1,232 +1,6 @@
-{ parent:
-   { parent: undefined,
-     store:
-      Map {
-        'mode' => 'development',
-        'context' => 'C:\\eminoda_workspace\\elsa\\examples' },
-     devServer:
-      { parent: [Circular],
-        store: Map {},
-        allowedHosts: [Object],
-        shorthands: [Array],
-        after: [Function],
-        before: [Function],
-        bonjour: [Function],
-        clientLogLevel: [Function],
-        color: [Function],
-        compress: [Function],
-        contentBase: [Function],
-        disableHostCheck: [Function],
-        filename: [Function],
-        headers: [Function],
-        historyApiFallback: [Function],
-        host: [Function],
-        hot: [Function],
-        hotOnly: [Function],
-        http2: [Function],
-        https: [Function],
-        index: [Function],
-        info: [Function],
-        inline: [Function],
-        lazy: [Function],
-        mimeTypes: [Function],
-        noInfo: [Function],
-        open: [Function],
-        openPage: [Function],
-        overlay: [Function],
-        pfx: [Function],
-        pfxPassphrase: [Function],
-        port: [Function],
-        proxy: [Function],
-        progress: [Function],
-        public: [Function],
-        publicPath: [Function],
-        quiet: [Function],
-        setup: [Function],
-        socket: [Function],
-        sockHost: [Function],
-        sockPath: [Function],
-        sockPort: [Function],
-        staticOptions: [Function],
-        stats: [Function],
-        stdin: [Function],
-        useLocalIp: [Function],
-        watchContentBase: [Function],
-        watchOptions: [Function],
-        writeToDisk: [Function] },
-     entryPoints: { parent: [Circular], store: [Map] },
-     module: [Circular],
-     node: { parent: [Circular], store: [Map] },
-     optimization:
-      { parent: [Circular],
-        store: [Map],
-        minimizers: [Object],
-        shorthands: [Array],
-        concatenateModules: [Function],
-        flagIncludedChunks: [Function],
-        mergeDuplicateChunks: [Function],
-        minimize: [Function],
-        namedChunks: [Function],
-        namedModules: [Function],
-        nodeEnv: [Function],
-        noEmitOnErrors: [Function],
-        occurrenceOrder: [Function],
-        portableRecords: [Function],
-        providedExports: [Function],
-        removeAvailableModules: [Function],
-        removeEmptyChunks: [Function],
-        runtimeChunk: [Function],
-        sideEffects: [Function],
-        splitChunks: [Function],
-        usedExports: [Function] },
-     output:
-      { parent: [Circular],
-        store: [Map],
-        shorthands: [Array],
-        auxiliaryComment: [Function],
-        chunkCallbackName: [Function],
-        chunkFilename: [Function],
-        chunkLoadTimeout: [Function],
-        crossOriginLoading: [Function],
-        devtoolFallbackModuleFilenameTemplate: [Function],
-        devtoolLineToLine: [Function],
-        devtoolModuleFilenameTemplate: [Function],
-        devtoolNamespace: [Function],
-        filename: [Function],
-        futureEmitAssets: [Function],
-        globalObject: [Function],
-        hashDigest: [Function],
-        hashDigestLength: [Function],
-        hashFunction: [Function],
-        hashSalt: [Function],
-        hotUpdateChunkFilename: [Function],
-        hotUpdateFunction: [Function],
-        hotUpdateMainFilename: [Function],
-        jsonpFunction: [Function],
-        library: [Function],
-        libraryExport: [Function],
-        libraryTarget: [Function],
-        path: [Function],
-        pathinfo: [Function],
-        publicPath: [Function],
-        sourceMapFilename: [Function],
-        sourcePrefix: [Function],
-        strictModuleExceptionHandling: [Function],
-        umdNamedDefine: [Function],
-        webassemblyModuleFilename: [Function] },
-     performance:
-      { parent: [Circular],
-        store: Map {},
-        shorthands: [Array],
-        assetFilter: [Function],
-        hints: [Function],
-        maxAssetSize: [Function],
-        maxEntrypointSize: [Function] },
-     plugins: { parent: [Circular], store: [Map] },
-     resolve:
-      { parent: [Circular],
-        store: Map {},
-        alias: [Object],
-        aliasFields: [Object],
-        descriptionFiles: [Object],
-        extensions: [Object],
-        mainFields: [Object],
-        mainFiles: [Object],
-        modules: [Object],
-        plugins: [Object],
-        shorthands: [Array],
-        cachePredicate: [Function],
-        cacheWithContext: [Function],
-        concord: [Function],
-        enforceExtension: [Function],
-        enforceModuleExtension: [Function],
-        symlinks: [Function],
-        unsafeCache: [Function] },
-     resolveLoader:
-      { parent: [Circular],
-        store: Map {},
-        alias: [Object],
-        aliasFields: [Object],
-        descriptionFiles: [Object],
-        extensions: [Object],
-        mainFields: [Object],
-        mainFiles: [Object],
-        modules: [Object],
-        plugins: [Object],
-        shorthands: [Array],
-        cachePredicate: [Function],
-        cacheWithContext: [Function],
-        concord: [Function],
-        enforceExtension: [Function],
-        enforceModuleExtension: [Function],
-        symlinks: [Function],
-        unsafeCache: [Function],
-        moduleExtensions: [Object],
-        packageMains: [Object] },
-     shorthands:
-      [ 'amd',
-        'bail',
-        'cache',
-        'context',
-        'devtool',
-        'externals',
-        'loader',
-        'mode',
-        'name',
-        'parallelism',
-        'profile',
-        'recordsInputPath',
-        'recordsPath',
-        'recordsOutputPath',
-        'stats',
-        'target',
-        'watch',
-        'watchOptions' ],
-     amd: [Function],
-     bail: [Function],
-     cache: [Function],
-     context: [Function],
-     devtool: [Function],
-     externals: [Function],
-     loader: [Function],
-     mode: [Function],
-     name: [Function],
-     parallelism: [Function],
-     profile: [Function],
-     recordsInputPath: [Function],
-     recordsPath: [Function],
-     recordsOutputPath: [Function],
-     stats: [Function],
-     target: [Function],
-     watch: [Function],
-     watchOptions: [Function] },
-  store:
-   Map { 'noParse' => /^(vue|vue-router|vuex|vuex-router-sync)$/ },
-  rules:
-   { parent: [Circular],
-     store:
-      Map {
-        'vue' => [Object],
-        'images' => [Object],
-        'svg' => [Object],
-        'media' => [Object],
-        'fonts' => [Object],
-        'pug' => [Object],
-        'css' => [Object],
-        'postcss' => [Object],
-        'scss' => [Object],
-        'sass' => [Object],
-        'less' => [Object],
-        'stylus' => [Object],
-        'js' => [Object],
-        'eslint' => [Object] } },
-  defaultRules: { parent: [Circular], store: Map {} },
-  shorthands: [ 'noParse', 'strictExportPresence' ],
-  noParse: [Function],
-  strictExportPresence: [Function] }
 {
   mode: 'development',
-  context: 'C:\\eminoda_workspace\\elsa\\examples',
+  context: 'D:\\project\\elsa\\examples',
   node: {
     setImmediate: false,
     process: 'mock',
@@ -237,16 +11,16 @@
     child_process: 'empty'
   },
   output: {
-    path: 'C:\\eminoda_workspace\\elsa\\examples\\dist',
+    path: 'D:\\project\\elsa\\examples\\dist',
     filename: 'js/[name].js',
     publicPath: '/',
     chunkFilename: 'js/[name].js'
   },
   resolve: {
     alias: {
-      '@': 'C:\\eminoda_workspace\\elsa\\examples\\src',
+      '@': 'D:\\project\\elsa\\examples\\src',
       vue$: 'vue/dist/vue.runtime.esm.js',
-      main: 'C:\\eminoda_workspace\\elsa\\src\\main'
+      main: 'D:\\project\\elsa\\src\\main'
     },
     extensions: [
       '.mjs',
@@ -264,8 +38,8 @@
     ],
     modules: [
       'node_modules',
-      'C:\\eminoda_workspace\\elsa\\examples\\node_modules',
-      'C:\\eminoda_workspace\\elsa\\examples\\node_modules\\@vue\\cli-service\\node_modules'
+      'D:\\project\\elsa\\examples\\node_modules',
+      'D:\\project\\elsa\\examples\\node_modules\\@vue\\cli-service\\node_modules'
     ],
     plugins: [
       {
@@ -287,10 +61,10 @@
   },
   resolveLoader: {
     modules: [
-      'C:\\eminoda_workspace\\elsa\\examples\\node_modules\\@vue\\cli-plugin-babel\\node_modules',
+      'D:\\project\\elsa\\examples\\node_modules\\@vue\\cli-plugin-babel\\node_modules',
       'node_modules',
-      'C:\\eminoda_workspace\\elsa\\examples\\node_modules',
-      'C:\\eminoda_workspace\\elsa\\examples\\node_modules\\@vue\\cli-service\\node_modules'
+      'D:\\project\\elsa\\examples\\node_modules',
+      'D:\\project\\elsa\\examples\\node_modules\\@vue\\cli-service\\node_modules'
     ],
     plugins: [
       {
@@ -308,20 +82,20 @@
         test: /\.vue$/,
         use: [
           {
-            loader: 'C:\\eminoda_workspace\\elsa\\examples\\node_modules\\cache-loader\\dist\\cjs.js',
+            loader: 'D:\\project\\elsa\\examples\\node_modules\\cache-loader\\dist\\cjs.js',
             options: {
-              cacheDirectory: 'C:\\eminoda_workspace\\elsa\\examples\\node_modules\\.cache\\vue-loader',
-              cacheIdentifier: '76a4bbc2'
+              cacheDirectory: 'D:\\project\\elsa\\examples\\node_modules\\.cache\\vue-loader',
+              cacheIdentifier: '7fafa35c'
             }
           },
           {
-            loader: 'C:\\eminoda_workspace\\elsa\\examples\\node_modules\\vue-loader\\lib\\index.js',
+            loader: 'D:\\project\\elsa\\examples\\node_modules\\vue-loader\\lib\\index.js',
             options: {
               compilerOptions: {
                 whitespace: 'condense'
               },
-              cacheDirectory: 'C:\\eminoda_workspace\\elsa\\examples\\node_modules\\.cache\\vue-loader',
-              cacheIdentifier: '76a4bbc2'
+              cacheDirectory: 'D:\\project\\elsa\\examples\\node_modules\\.cache\\vue-loader',
+              cacheIdentifier: '7fafa35c'
             }
           }
         ]
@@ -331,11 +105,11 @@
         test: /\.(png|jpe?g|gif|webp)(\?.*)?$/,
         use: [
           {
-            loader: 'C:\\eminoda_workspace\\elsa\\examples\\node_modules\\url-loader\\dist\\cjs.js',
+            loader: 'D:\\project\\elsa\\examples\\node_modules\\url-loader\\dist\\cjs.js',
             options: {
               limit: 4096,
               fallback: {
-                loader: 'C:\\eminoda_workspace\\elsa\\examples\\node_modules\\file-loader\\dist\\cjs.js',
+                loader: 'D:\\project\\elsa\\examples\\node_modules\\file-loader\\dist\\cjs.js',
                 options: {
                   name: 'img/[name].[hash:8].[ext]'
                 }
@@ -349,7 +123,7 @@
         test: /\.(svg)(\?.*)?$/,
         use: [
           {
-            loader: 'C:\\eminoda_workspace\\elsa\\examples\\node_modules\\file-loader\\dist\\cjs.js',
+            loader: 'D:\\project\\elsa\\examples\\node_modules\\file-loader\\dist\\cjs.js',
             options: {
               name: 'img/[name].[hash:8].[ext]'
             }
@@ -361,11 +135,11 @@
         test: /\.(mp4|webm|ogg|mp3|wav|flac|aac)(\?.*)?$/,
         use: [
           {
-            loader: 'C:\\eminoda_workspace\\elsa\\examples\\node_modules\\url-loader\\dist\\cjs.js',
+            loader: 'D:\\project\\elsa\\examples\\node_modules\\url-loader\\dist\\cjs.js',
             options: {
               limit: 4096,
               fallback: {
-                loader: 'C:\\eminoda_workspace\\elsa\\examples\\node_modules\\file-loader\\dist\\cjs.js',
+                loader: 'D:\\project\\elsa\\examples\\node_modules\\file-loader\\dist\\cjs.js',
                 options: {
                   name: 'media/[name].[hash:8].[ext]'
                 }
@@ -379,11 +153,11 @@
         test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/i,
         use: [
           {
-            loader: 'C:\\eminoda_workspace\\elsa\\examples\\node_modules\\url-loader\\dist\\cjs.js',
+            loader: 'D:\\project\\elsa\\examples\\node_modules\\url-loader\\dist\\cjs.js',
             options: {
               limit: 4096,
               fallback: {
-                loader: 'C:\\eminoda_workspace\\elsa\\examples\\node_modules\\file-loader\\dist\\cjs.js',
+                loader: 'D:\\project\\elsa\\examples\\node_modules\\file-loader\\dist\\cjs.js',
                 options: {
                   name: 'fonts/[name].[hash:8].[ext]'
                 }
@@ -427,14 +201,14 @@
             resourceQuery: /module/,
             use: [
               {
-                loader: 'C:\\eminoda_workspace\\elsa\\examples\\node_modules\\vue-style-loader\\index.js',
+                loader: 'D:\\project\\elsa\\examples\\node_modules\\vue-style-loader\\index.js',
                 options: {
                   sourceMap: false,
                   shadowMode: false
                 }
               },
               {
-                loader: 'C:\\eminoda_workspace\\elsa\\examples\\node_modules\\css-loader\\dist\\cjs.js',
+                loader: 'D:\\project\\elsa\\examples\\node_modules\\css-loader\\dist\\cjs.js',
                 options: {
                   sourceMap: false,
                   importLoaders: 2,
@@ -444,7 +218,7 @@
                 }
               },
               {
-                loader: 'C:\\eminoda_workspace\\elsa\\examples\\node_modules\\postcss-loader\\src\\index.js',
+                loader: 'D:\\project\\elsa\\examples\\node_modules\\postcss-loader\\src\\index.js',
                 options: {
                   sourceMap: false,
                   plugins: [
@@ -459,21 +233,21 @@
             resourceQuery: /\?vue/,
             use: [
               {
-                loader: 'C:\\eminoda_workspace\\elsa\\examples\\node_modules\\vue-style-loader\\index.js',
+                loader: 'D:\\project\\elsa\\examples\\node_modules\\vue-style-loader\\index.js',
                 options: {
                   sourceMap: false,
                   shadowMode: false
                 }
               },
               {
-                loader: 'C:\\eminoda_workspace\\elsa\\examples\\node_modules\\css-loader\\dist\\cjs.js',
+                loader: 'D:\\project\\elsa\\examples\\node_modules\\css-loader\\dist\\cjs.js',
                 options: {
                   sourceMap: false,
                   importLoaders: 2
                 }
               },
               {
-                loader: 'C:\\eminoda_workspace\\elsa\\examples\\node_modules\\postcss-loader\\src\\index.js',
+                loader: 'D:\\project\\elsa\\examples\\node_modules\\postcss-loader\\src\\index.js',
                 options: {
                   sourceMap: false,
                   plugins: [
@@ -488,14 +262,14 @@
             test: /\.module\.\w+$/,
             use: [
               {
-                loader: 'C:\\eminoda_workspace\\elsa\\examples\\node_modules\\vue-style-loader\\index.js',
+                loader: 'D:\\project\\elsa\\examples\\node_modules\\vue-style-loader\\index.js',
                 options: {
                   sourceMap: false,
                   shadowMode: false
                 }
               },
               {
-                loader: 'C:\\eminoda_workspace\\elsa\\examples\\node_modules\\css-loader\\dist\\cjs.js',
+                loader: 'D:\\project\\elsa\\examples\\node_modules\\css-loader\\dist\\cjs.js',
                 options: {
                   sourceMap: false,
                   importLoaders: 2,
@@ -505,7 +279,7 @@
                 }
               },
               {
-                loader: 'C:\\eminoda_workspace\\elsa\\examples\\node_modules\\postcss-loader\\src\\index.js',
+                loader: 'D:\\project\\elsa\\examples\\node_modules\\postcss-loader\\src\\index.js',
                 options: {
                   sourceMap: false,
                   plugins: [
@@ -519,21 +293,21 @@
           {
             use: [
               {
-                loader: 'C:\\eminoda_workspace\\elsa\\examples\\node_modules\\vue-style-loader\\index.js',
+                loader: 'D:\\project\\elsa\\examples\\node_modules\\vue-style-loader\\index.js',
                 options: {
                   sourceMap: false,
                   shadowMode: false
                 }
               },
               {
-                loader: 'C:\\eminoda_workspace\\elsa\\examples\\node_modules\\css-loader\\dist\\cjs.js',
+                loader: 'D:\\project\\elsa\\examples\\node_modules\\css-loader\\dist\\cjs.js',
                 options: {
                   sourceMap: false,
                   importLoaders: 2
                 }
               },
               {
-                loader: 'C:\\eminoda_workspace\\elsa\\examples\\node_modules\\postcss-loader\\src\\index.js',
+                loader: 'D:\\project\\elsa\\examples\\node_modules\\postcss-loader\\src\\index.js',
                 options: {
                   sourceMap: false,
                   plugins: [
@@ -554,14 +328,14 @@
             resourceQuery: /module/,
             use: [
               {
-                loader: 'C:\\eminoda_workspace\\elsa\\examples\\node_modules\\vue-style-loader\\index.js',
+                loader: 'D:\\project\\elsa\\examples\\node_modules\\vue-style-loader\\index.js',
                 options: {
                   sourceMap: false,
                   shadowMode: false
                 }
               },
               {
-                loader: 'C:\\eminoda_workspace\\elsa\\examples\\node_modules\\css-loader\\dist\\cjs.js',
+                loader: 'D:\\project\\elsa\\examples\\node_modules\\css-loader\\dist\\cjs.js',
                 options: {
                   sourceMap: false,
                   importLoaders: 2,
@@ -571,7 +345,7 @@
                 }
               },
               {
-                loader: 'C:\\eminoda_workspace\\elsa\\examples\\node_modules\\postcss-loader\\src\\index.js',
+                loader: 'D:\\project\\elsa\\examples\\node_modules\\postcss-loader\\src\\index.js',
                 options: {
                   sourceMap: false,
                   plugins: [
@@ -586,21 +360,21 @@
             resourceQuery: /\?vue/,
             use: [
               {
-                loader: 'C:\\eminoda_workspace\\elsa\\examples\\node_modules\\vue-style-loader\\index.js',
+                loader: 'D:\\project\\elsa\\examples\\node_modules\\vue-style-loader\\index.js',
                 options: {
                   sourceMap: false,
                   shadowMode: false
                 }
               },
               {
-                loader: 'C:\\eminoda_workspace\\elsa\\examples\\node_modules\\css-loader\\dist\\cjs.js',
+                loader: 'D:\\project\\elsa\\examples\\node_modules\\css-loader\\dist\\cjs.js',
                 options: {
                   sourceMap: false,
                   importLoaders: 2
                 }
               },
               {
-                loader: 'C:\\eminoda_workspace\\elsa\\examples\\node_modules\\postcss-loader\\src\\index.js',
+                loader: 'D:\\project\\elsa\\examples\\node_modules\\postcss-loader\\src\\index.js',
                 options: {
                   sourceMap: false,
                   plugins: [
@@ -615,14 +389,14 @@
             test: /\.module\.\w+$/,
             use: [
               {
-                loader: 'C:\\eminoda_workspace\\elsa\\examples\\node_modules\\vue-style-loader\\index.js',
+                loader: 'D:\\project\\elsa\\examples\\node_modules\\vue-style-loader\\index.js',
                 options: {
                   sourceMap: false,
                   shadowMode: false
                 }
               },
               {
-                loader: 'C:\\eminoda_workspace\\elsa\\examples\\node_modules\\css-loader\\dist\\cjs.js',
+                loader: 'D:\\project\\elsa\\examples\\node_modules\\css-loader\\dist\\cjs.js',
                 options: {
                   sourceMap: false,
                   importLoaders: 2,
@@ -632,7 +406,7 @@
                 }
               },
               {
-                loader: 'C:\\eminoda_workspace\\elsa\\examples\\node_modules\\postcss-loader\\src\\index.js',
+                loader: 'D:\\project\\elsa\\examples\\node_modules\\postcss-loader\\src\\index.js',
                 options: {
                   sourceMap: false,
                   plugins: [
@@ -646,21 +420,21 @@
           {
             use: [
               {
-                loader: 'C:\\eminoda_workspace\\elsa\\examples\\node_modules\\vue-style-loader\\index.js',
+                loader: 'D:\\project\\elsa\\examples\\node_modules\\vue-style-loader\\index.js',
                 options: {
                   sourceMap: false,
                   shadowMode: false
                 }
               },
               {
-                loader: 'C:\\eminoda_workspace\\elsa\\examples\\node_modules\\css-loader\\dist\\cjs.js',
+                loader: 'D:\\project\\elsa\\examples\\node_modules\\css-loader\\dist\\cjs.js',
                 options: {
                   sourceMap: false,
                   importLoaders: 2
                 }
               },
               {
-                loader: 'C:\\eminoda_workspace\\elsa\\examples\\node_modules\\postcss-loader\\src\\index.js',
+                loader: 'D:\\project\\elsa\\examples\\node_modules\\postcss-loader\\src\\index.js',
                 options: {
                   sourceMap: false,
                   plugins: [
@@ -681,14 +455,14 @@
             resourceQuery: /module/,
             use: [
               {
-                loader: 'C:\\eminoda_workspace\\elsa\\examples\\node_modules\\vue-style-loader\\index.js',
+                loader: 'D:\\project\\elsa\\examples\\node_modules\\vue-style-loader\\index.js',
                 options: {
                   sourceMap: false,
                   shadowMode: false
                 }
               },
               {
-                loader: 'C:\\eminoda_workspace\\elsa\\examples\\node_modules\\css-loader\\dist\\cjs.js',
+                loader: 'D:\\project\\elsa\\examples\\node_modules\\css-loader\\dist\\cjs.js',
                 options: {
                   sourceMap: false,
                   importLoaders: 2,
@@ -698,7 +472,7 @@
                 }
               },
               {
-                loader: 'C:\\eminoda_workspace\\elsa\\examples\\node_modules\\postcss-loader\\src\\index.js',
+                loader: 'D:\\project\\elsa\\examples\\node_modules\\postcss-loader\\src\\index.js',
                 options: {
                   sourceMap: false,
                   plugins: [
@@ -719,21 +493,21 @@
             resourceQuery: /\?vue/,
             use: [
               {
-                loader: 'C:\\eminoda_workspace\\elsa\\examples\\node_modules\\vue-style-loader\\index.js',
+                loader: 'D:\\project\\elsa\\examples\\node_modules\\vue-style-loader\\index.js',
                 options: {
                   sourceMap: false,
                   shadowMode: false
                 }
               },
               {
-                loader: 'C:\\eminoda_workspace\\elsa\\examples\\node_modules\\css-loader\\dist\\cjs.js',
+                loader: 'D:\\project\\elsa\\examples\\node_modules\\css-loader\\dist\\cjs.js',
                 options: {
                   sourceMap: false,
                   importLoaders: 2
                 }
               },
               {
-                loader: 'C:\\eminoda_workspace\\elsa\\examples\\node_modules\\postcss-loader\\src\\index.js',
+                loader: 'D:\\project\\elsa\\examples\\node_modules\\postcss-loader\\src\\index.js',
                 options: {
                   sourceMap: false,
                   plugins: [
@@ -754,14 +528,14 @@
             test: /\.module\.\w+$/,
             use: [
               {
-                loader: 'C:\\eminoda_workspace\\elsa\\examples\\node_modules\\vue-style-loader\\index.js',
+                loader: 'D:\\project\\elsa\\examples\\node_modules\\vue-style-loader\\index.js',
                 options: {
                   sourceMap: false,
                   shadowMode: false
                 }
               },
               {
-                loader: 'C:\\eminoda_workspace\\elsa\\examples\\node_modules\\css-loader\\dist\\cjs.js',
+                loader: 'D:\\project\\elsa\\examples\\node_modules\\css-loader\\dist\\cjs.js',
                 options: {
                   sourceMap: false,
                   importLoaders: 2,
@@ -771,7 +545,7 @@
                 }
               },
               {
-                loader: 'C:\\eminoda_workspace\\elsa\\examples\\node_modules\\postcss-loader\\src\\index.js',
+                loader: 'D:\\project\\elsa\\examples\\node_modules\\postcss-loader\\src\\index.js',
                 options: {
                   sourceMap: false,
                   plugins: [
@@ -791,21 +565,21 @@
           {
             use: [
               {
-                loader: 'C:\\eminoda_workspace\\elsa\\examples\\node_modules\\vue-style-loader\\index.js',
+                loader: 'D:\\project\\elsa\\examples\\node_modules\\vue-style-loader\\index.js',
                 options: {
                   sourceMap: false,
                   shadowMode: false
                 }
               },
               {
-                loader: 'C:\\eminoda_workspace\\elsa\\examples\\node_modules\\css-loader\\dist\\cjs.js',
+                loader: 'D:\\project\\elsa\\examples\\node_modules\\css-loader\\dist\\cjs.js',
                 options: {
                   sourceMap: false,
                   importLoaders: 2
                 }
               },
               {
-                loader: 'C:\\eminoda_workspace\\elsa\\examples\\node_modules\\postcss-loader\\src\\index.js',
+                loader: 'D:\\project\\elsa\\examples\\node_modules\\postcss-loader\\src\\index.js',
                 options: {
                   sourceMap: false,
                   plugins: [
@@ -832,14 +606,14 @@
             resourceQuery: /module/,
             use: [
               {
-                loader: 'C:\\eminoda_workspace\\elsa\\examples\\node_modules\\vue-style-loader\\index.js',
+                loader: 'D:\\project\\elsa\\examples\\node_modules\\vue-style-loader\\index.js',
                 options: {
                   sourceMap: false,
                   shadowMode: false
                 }
               },
               {
-                loader: 'C:\\eminoda_workspace\\elsa\\examples\\node_modules\\css-loader\\dist\\cjs.js',
+                loader: 'D:\\project\\elsa\\examples\\node_modules\\css-loader\\dist\\cjs.js',
                 options: {
                   sourceMap: false,
                   importLoaders: 2,
@@ -849,7 +623,7 @@
                 }
               },
               {
-                loader: 'C:\\eminoda_workspace\\elsa\\examples\\node_modules\\postcss-loader\\src\\index.js',
+                loader: 'D:\\project\\elsa\\examples\\node_modules\\postcss-loader\\src\\index.js',
                 options: {
                   sourceMap: false,
                   plugins: [
@@ -873,21 +647,21 @@
             resourceQuery: /\?vue/,
             use: [
               {
-                loader: 'C:\\eminoda_workspace\\elsa\\examples\\node_modules\\vue-style-loader\\index.js',
+                loader: 'D:\\project\\elsa\\examples\\node_modules\\vue-style-loader\\index.js',
                 options: {
                   sourceMap: false,
                   shadowMode: false
                 }
               },
               {
-                loader: 'C:\\eminoda_workspace\\elsa\\examples\\node_modules\\css-loader\\dist\\cjs.js',
+                loader: 'D:\\project\\elsa\\examples\\node_modules\\css-loader\\dist\\cjs.js',
                 options: {
                   sourceMap: false,
                   importLoaders: 2
                 }
               },
               {
-                loader: 'C:\\eminoda_workspace\\elsa\\examples\\node_modules\\postcss-loader\\src\\index.js',
+                loader: 'D:\\project\\elsa\\examples\\node_modules\\postcss-loader\\src\\index.js',
                 options: {
                   sourceMap: false,
                   plugins: [
@@ -911,14 +685,14 @@
             test: /\.module\.\w+$/,
             use: [
               {
-                loader: 'C:\\eminoda_workspace\\elsa\\examples\\node_modules\\vue-style-loader\\index.js',
+                loader: 'D:\\project\\elsa\\examples\\node_modules\\vue-style-loader\\index.js',
                 options: {
                   sourceMap: false,
                   shadowMode: false
                 }
               },
               {
-                loader: 'C:\\eminoda_workspace\\elsa\\examples\\node_modules\\css-loader\\dist\\cjs.js',
+                loader: 'D:\\project\\elsa\\examples\\node_modules\\css-loader\\dist\\cjs.js',
                 options: {
                   sourceMap: false,
                   importLoaders: 2,
@@ -928,7 +702,7 @@
                 }
               },
               {
-                loader: 'C:\\eminoda_workspace\\elsa\\examples\\node_modules\\postcss-loader\\src\\index.js',
+                loader: 'D:\\project\\elsa\\examples\\node_modules\\postcss-loader\\src\\index.js',
                 options: {
                   sourceMap: false,
                   plugins: [
@@ -951,21 +725,21 @@
           {
             use: [
               {
-                loader: 'C:\\eminoda_workspace\\elsa\\examples\\node_modules\\vue-style-loader\\index.js',
+                loader: 'D:\\project\\elsa\\examples\\node_modules\\vue-style-loader\\index.js',
                 options: {
                   sourceMap: false,
                   shadowMode: false
                 }
               },
               {
-                loader: 'C:\\eminoda_workspace\\elsa\\examples\\node_modules\\css-loader\\dist\\cjs.js',
+                loader: 'D:\\project\\elsa\\examples\\node_modules\\css-loader\\dist\\cjs.js',
                 options: {
                   sourceMap: false,
                   importLoaders: 2
                 }
               },
               {
-                loader: 'C:\\eminoda_workspace\\elsa\\examples\\node_modules\\postcss-loader\\src\\index.js',
+                loader: 'D:\\project\\elsa\\examples\\node_modules\\postcss-loader\\src\\index.js',
                 options: {
                   sourceMap: false,
                   plugins: [
@@ -995,14 +769,14 @@
             resourceQuery: /module/,
             use: [
               {
-                loader: 'C:\\eminoda_workspace\\elsa\\examples\\node_modules\\vue-style-loader\\index.js',
+                loader: 'D:\\project\\elsa\\examples\\node_modules\\vue-style-loader\\index.js',
                 options: {
                   sourceMap: false,
                   shadowMode: false
                 }
               },
               {
-                loader: 'C:\\eminoda_workspace\\elsa\\examples\\node_modules\\css-loader\\dist\\cjs.js',
+                loader: 'D:\\project\\elsa\\examples\\node_modules\\css-loader\\dist\\cjs.js',
                 options: {
                   sourceMap: false,
                   importLoaders: 2,
@@ -1012,7 +786,7 @@
                 }
               },
               {
-                loader: 'C:\\eminoda_workspace\\elsa\\examples\\node_modules\\postcss-loader\\src\\index.js',
+                loader: 'D:\\project\\elsa\\examples\\node_modules\\postcss-loader\\src\\index.js',
                 options: {
                   sourceMap: false,
                   plugins: [
@@ -1021,7 +795,7 @@
                 }
               },
               {
-                loader: 'C:\\eminoda_workspace\\elsa\\examples\\node_modules\\less-loader\\dist\\cjs.js',
+                loader: 'D:\\project\\elsa\\examples\\node_modules\\less-loader\\dist\\cjs.js',
                 options: {
                   sourceMap: false
                 }
@@ -1033,21 +807,21 @@
             resourceQuery: /\?vue/,
             use: [
               {
-                loader: 'C:\\eminoda_workspace\\elsa\\examples\\node_modules\\vue-style-loader\\index.js',
+                loader: 'D:\\project\\elsa\\examples\\node_modules\\vue-style-loader\\index.js',
                 options: {
                   sourceMap: false,
                   shadowMode: false
                 }
               },
               {
-                loader: 'C:\\eminoda_workspace\\elsa\\examples\\node_modules\\css-loader\\dist\\cjs.js',
+                loader: 'D:\\project\\elsa\\examples\\node_modules\\css-loader\\dist\\cjs.js',
                 options: {
                   sourceMap: false,
                   importLoaders: 2
                 }
               },
               {
-                loader: 'C:\\eminoda_workspace\\elsa\\examples\\node_modules\\postcss-loader\\src\\index.js',
+                loader: 'D:\\project\\elsa\\examples\\node_modules\\postcss-loader\\src\\index.js',
                 options: {
                   sourceMap: false,
                   plugins: [
@@ -1056,7 +830,7 @@
                 }
               },
               {
-                loader: 'C:\\eminoda_workspace\\elsa\\examples\\node_modules\\less-loader\\dist\\cjs.js',
+                loader: 'D:\\project\\elsa\\examples\\node_modules\\less-loader\\dist\\cjs.js',
                 options: {
                   sourceMap: false
                 }
@@ -1068,14 +842,14 @@
             test: /\.module\.\w+$/,
             use: [
               {
-                loader: 'C:\\eminoda_workspace\\elsa\\examples\\node_modules\\vue-style-loader\\index.js',
+                loader: 'D:\\project\\elsa\\examples\\node_modules\\vue-style-loader\\index.js',
                 options: {
                   sourceMap: false,
                   shadowMode: false
                 }
               },
               {
-                loader: 'C:\\eminoda_workspace\\elsa\\examples\\node_modules\\css-loader\\dist\\cjs.js',
+                loader: 'D:\\project\\elsa\\examples\\node_modules\\css-loader\\dist\\cjs.js',
                 options: {
                   sourceMap: false,
                   importLoaders: 2,
@@ -1085,7 +859,7 @@
                 }
               },
               {
-                loader: 'C:\\eminoda_workspace\\elsa\\examples\\node_modules\\postcss-loader\\src\\index.js',
+                loader: 'D:\\project\\elsa\\examples\\node_modules\\postcss-loader\\src\\index.js',
                 options: {
                   sourceMap: false,
                   plugins: [
@@ -1094,7 +868,7 @@
                 }
               },
               {
-                loader: 'C:\\eminoda_workspace\\elsa\\examples\\node_modules\\less-loader\\dist\\cjs.js',
+                loader: 'D:\\project\\elsa\\examples\\node_modules\\less-loader\\dist\\cjs.js',
                 options: {
                   sourceMap: false
                 }
@@ -1105,21 +879,21 @@
           {
             use: [
               {
-                loader: 'C:\\eminoda_workspace\\elsa\\examples\\node_modules\\vue-style-loader\\index.js',
+                loader: 'D:\\project\\elsa\\examples\\node_modules\\vue-style-loader\\index.js',
                 options: {
                   sourceMap: false,
                   shadowMode: false
                 }
               },
               {
-                loader: 'C:\\eminoda_workspace\\elsa\\examples\\node_modules\\css-loader\\dist\\cjs.js',
+                loader: 'D:\\project\\elsa\\examples\\node_modules\\css-loader\\dist\\cjs.js',
                 options: {
                   sourceMap: false,
                   importLoaders: 2
                 }
               },
               {
-                loader: 'C:\\eminoda_workspace\\elsa\\examples\\node_modules\\postcss-loader\\src\\index.js',
+                loader: 'D:\\project\\elsa\\examples\\node_modules\\postcss-loader\\src\\index.js',
                 options: {
                   sourceMap: false,
                   plugins: [
@@ -1128,7 +902,7 @@
                 }
               },
               {
-                loader: 'C:\\eminoda_workspace\\elsa\\examples\\node_modules\\less-loader\\dist\\cjs.js',
+                loader: 'D:\\project\\elsa\\examples\\node_modules\\less-loader\\dist\\cjs.js',
                 options: {
                   sourceMap: false
                 }
@@ -1146,14 +920,14 @@
             resourceQuery: /module/,
             use: [
               {
-                loader: 'C:\\eminoda_workspace\\elsa\\examples\\node_modules\\vue-style-loader\\index.js',
+                loader: 'D:\\project\\elsa\\examples\\node_modules\\vue-style-loader\\index.js',
                 options: {
                   sourceMap: false,
                   shadowMode: false
                 }
               },
               {
-                loader: 'C:\\eminoda_workspace\\elsa\\examples\\node_modules\\css-loader\\dist\\cjs.js',
+                loader: 'D:\\project\\elsa\\examples\\node_modules\\css-loader\\dist\\cjs.js',
                 options: {
                   sourceMap: false,
                   importLoaders: 2,
@@ -1163,7 +937,7 @@
                 }
               },
               {
-                loader: 'C:\\eminoda_workspace\\elsa\\examples\\node_modules\\postcss-loader\\src\\index.js',
+                loader: 'D:\\project\\elsa\\examples\\node_modules\\postcss-loader\\src\\index.js',
                 options: {
                   sourceMap: false,
                   plugins: [
@@ -1185,21 +959,21 @@
             resourceQuery: /\?vue/,
             use: [
               {
-                loader: 'C:\\eminoda_workspace\\elsa\\examples\\node_modules\\vue-style-loader\\index.js',
+                loader: 'D:\\project\\elsa\\examples\\node_modules\\vue-style-loader\\index.js',
                 options: {
                   sourceMap: false,
                   shadowMode: false
                 }
               },
               {
-                loader: 'C:\\eminoda_workspace\\elsa\\examples\\node_modules\\css-loader\\dist\\cjs.js',
+                loader: 'D:\\project\\elsa\\examples\\node_modules\\css-loader\\dist\\cjs.js',
                 options: {
                   sourceMap: false,
                   importLoaders: 2
                 }
               },
               {
-                loader: 'C:\\eminoda_workspace\\elsa\\examples\\node_modules\\postcss-loader\\src\\index.js',
+                loader: 'D:\\project\\elsa\\examples\\node_modules\\postcss-loader\\src\\index.js',
                 options: {
                   sourceMap: false,
                   plugins: [
@@ -1221,14 +995,14 @@
             test: /\.module\.\w+$/,
             use: [
               {
-                loader: 'C:\\eminoda_workspace\\elsa\\examples\\node_modules\\vue-style-loader\\index.js',
+                loader: 'D:\\project\\elsa\\examples\\node_modules\\vue-style-loader\\index.js',
                 options: {
                   sourceMap: false,
                   shadowMode: false
                 }
               },
               {
-                loader: 'C:\\eminoda_workspace\\elsa\\examples\\node_modules\\css-loader\\dist\\cjs.js',
+                loader: 'D:\\project\\elsa\\examples\\node_modules\\css-loader\\dist\\cjs.js',
                 options: {
                   sourceMap: false,
                   importLoaders: 2,
@@ -1238,7 +1012,7 @@
                 }
               },
               {
-                loader: 'C:\\eminoda_workspace\\elsa\\examples\\node_modules\\postcss-loader\\src\\index.js',
+                loader: 'D:\\project\\elsa\\examples\\node_modules\\postcss-loader\\src\\index.js',
                 options: {
                   sourceMap: false,
                   plugins: [
@@ -1259,21 +1033,21 @@
           {
             use: [
               {
-                loader: 'C:\\eminoda_workspace\\elsa\\examples\\node_modules\\vue-style-loader\\index.js',
+                loader: 'D:\\project\\elsa\\examples\\node_modules\\vue-style-loader\\index.js',
                 options: {
                   sourceMap: false,
                   shadowMode: false
                 }
               },
               {
-                loader: 'C:\\eminoda_workspace\\elsa\\examples\\node_modules\\css-loader\\dist\\cjs.js',
+                loader: 'D:\\project\\elsa\\examples\\node_modules\\css-loader\\dist\\cjs.js',
                 options: {
                   sourceMap: false,
                   importLoaders: 2
                 }
               },
               {
-                loader: 'C:\\eminoda_workspace\\elsa\\examples\\node_modules\\postcss-loader\\src\\index.js',
+                loader: 'D:\\project\\elsa\\examples\\node_modules\\postcss-loader\\src\\index.js',
                 options: {
                   sourceMap: false,
                   plugins: [
@@ -1300,14 +1074,14 @@
         ],
         use: [
           {
-            loader: 'C:\\eminoda_workspace\\elsa\\examples\\node_modules\\cache-loader\\dist\\cjs.js',
+            loader: 'D:\\project\\elsa\\examples\\node_modules\\cache-loader\\dist\\cjs.js',
             options: {
-              cacheDirectory: 'C:\\eminoda_workspace\\elsa\\examples\\node_modules\\.cache\\babel-loader',
-              cacheIdentifier: '32f54df2'
+              cacheDirectory: 'D:\\project\\elsa\\examples\\node_modules\\.cache\\babel-loader',
+              cacheIdentifier: '6b856ad4'
             }
           },
           {
-            loader: 'C:\\eminoda_workspace\\elsa\\examples\\node_modules\\babel-loader\\lib\\index.js'
+            loader: 'D:\\project\\elsa\\examples\\node_modules\\babel-loader\\lib\\index.js'
           }
         ]
       },
@@ -1317,11 +1091,11 @@
         test: /\.(vue|(j|t)sx?)$/,
         exclude: [
           /node_modules/,
-          'C:\\eminoda_workspace\\elsa\\examples\\node_modules\\@vue\\cli-service\\lib'
+          'D:\\project\\elsa\\examples\\node_modules\\@vue\\cli-service\\lib'
         ],
         use: [
           {
-            loader: 'C:\\eminoda_workspace\\elsa\\examples\\node_modules\\eslint-loader\\index.js',
+            loader: 'D:\\project\\elsa\\examples\\node_modules\\eslint-loader\\index.js',
             options: {
               extensions: [
                 '.js',
@@ -1329,10 +1103,10 @@
                 '.vue'
               ],
               cache: true,
-              cacheIdentifier: '566e2c26',
+              cacheIdentifier: 'f309a84c',
               emitWarning: false,
               emitError: false,
-              eslintPath: 'C:\\eminoda_workspace\\elsa\\examples\\node_modules\\eslint',
+              eslintPath: 'D:\\project\\elsa\\examples\\node_modules\\eslint',
               formatter: undefined
             }
           }
@@ -1343,10 +1117,10 @@
         test: /\.md$/,
         use: [
           {
-            loader: 'C:\\eminoda_workspace\\elsa\\examples\\build\\markdown-loader'
+            loader: 'vue-loader'
           },
           {
-            loader: 'vue-loader'
+            loader: 'D:\\project\\elsa\\examples\\build\\markdown-loader\\index.js'
           }
         ]
       }
@@ -1357,7 +1131,7 @@
       cacheGroups: {
         vendors: {
           name: 'chunk-vendors',
-          test: /[\\\/]node_modules[\\\/]/,
+          test: /[\\/]node_modules[\\/]/,
           priority: -10,
           chunks: 'initial'
         },
@@ -1448,7 +1222,7 @@
       {
         title: 'examples',
         templateParameters: function () { /* omitted long function */ },
-        template: 'C:\\eminoda_workspace\\elsa\\examples\\public\\index.html'
+        template: 'D:\\project\\elsa\\examples\\public\\index.html'
       }
     ),
     /* config.plugin('preload') */
@@ -1473,8 +1247,8 @@
     new CopyPlugin(
       [
         {
-          from: 'C:\\eminoda_workspace\\elsa\\examples\\public',
-          to: 'C:\\eminoda_workspace\\elsa\\examples\\dist',
+          from: 'D:\\project\\elsa\\examples\\public',
+          to: 'D:\\project\\elsa\\examples\\dist',
           toType: 'dir',
           ignore: [
             '.DS_Store',
