@@ -3,7 +3,9 @@
     <div class="view-wrap">
       <slot name="source"></slot>
     </div>
-    <slot />
+    <div class="code-wrap">
+      <slot />
+    </div>
   </div>
 </template>
 
@@ -13,7 +15,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="less" scoped>
 .demo-wrap {
   border: 1px solid #ebebeb;
   margin: 2px;
@@ -25,8 +27,10 @@ export default {
   padding: 24px;
   font-size: 16px;
 }
-pre {
-  margin: 0;
+.code-wrap {
   font-size: 14px;
+  pre {
+    margin: 0;
+  }
 }
 </style>
