@@ -1,0 +1,33 @@
+a.header-anchor {
+  color: #409eff;
+  text-decoration: none;
+}
+table {
+  border-collapse: collapse;
+  margin: 1rem 0;
+  display: block;
+  overflow-x: auto;
+}
+
+tr {
+  border-top: 1px solid #dfe2e5;
+}
+tr:nth-child(2n) {
+  background-color: #f6f8fa;
+}
+
+th,
+td {
+  border: 1px solid #dfe2e5;
+  padding: 0.6em 1em;
+}
+
+table a,
+p a {
+  border-color: transparent;
+  color: #409eff;
+  background: transparent;
+  padding-left: 0;
+  padding-right: 0;
+  text-decoration: none;
+}

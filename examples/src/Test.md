@@ -10,6 +10,7 @@
     vue 标题 {{test}}
   </div>
 </template>
+
 <script>
   export default {
     data() {

@@ -29,9 +29,12 @@
     "less": "^4.1.0",
     "less-loader": "^7.3.0",
     "markdown-it": "^12.0.4",
+    "markdown-it-anchor": "^7.0.2",
     "markdown-it-chain": "^1.3.0",
     "markdown-it-container": "^3.0.0",
+    "markdown-it-table-of-contents": "^0.5.2",
     "prismjs": "^1.23.0",
+    "transliteration": "^2.2.0",
     "vue-template-compiler": "^2.6.11"
   },
   "eslintConfig": {

@@ -18,16 +18,86 @@
 </template>
 
 <script>
-import { fields } from './data/basicConfig'
 export default {
   data() {
     return {
-      fields,
+      fields: {
+        // 一般输入框
+        name: {
+          label: '用户名',
+          elTag: 'el-input',
+          elAttrs: {
+            placeholder: '请输入用户名',
+            clearable: true
+          },
+          elSlots: {
+            prepend: 'name-icon'
+          },
+          rules: [{ required: true, message: '用户名不能为空', trigger: 'change' }]
+        },
+        // 密码输入框
+        password: {
+          label: '密码',
+          elTag: 'el-input',
+          elAttrs: {
+            type: 'password',
+            showPassword: true
+          },
+          rules: [{ required: true, trigger: 'change' }]
+        },
+        // 文本框
+        desc: {
+          label: '个人描述',
+          elTag: 'el-input',
+          elAttrs: {
+            type: 'textarea',
+            rows: 3
+          }
+        },
+        // 多选框 checkbox
+        company: {
+          label: '就职公司',
+          elTag: 'el-checkbox',
+          elAttrs: {},
+          rules: [{ required: true, trigger: 'change' }],
+          options: [
+            { label: 'alibaba', value: 'alibaba' },
+            { label: 'tencent', value: 'tencent' },
+            { label: 'baidu', value: 'baidu' }
+          ]
+        },
+        // 单选框 radio
+        end: {
+          label: '前/后端',
+          elTag: 'el-radio',
+          elAttrs: {},
+          rules: [{ required: true, message: '前/后端不能为空', trigger: 'change' }],
+          options: [
+            { label: '前端', value: 1 },
+            { label: '后端', value: 2 }
+          ]
+        },
+        // 下拉框
+        skill: {
+          label: '技术栈',
+          elTag: 'el-select',
+          elAttrs: {},
+          rules: [{ required: true, trigger: 'change' }],
+          options: [
+            { label: 'angular', value: 'angular' },
+            { label: 'react', value: 'react' },
+            { label: 'vue', value: 'vue' },
+            { label: 'nodejs', value: 'nodejs' },
+            { label: 'mysql', value: 'mysql' },
+            { label: 'java', value: 'java' }
+          ]
+        }
+      },
       model: {
         name: '',
         password: '',
-        company: [],
         desc: '',
+        company: [],
         end: '',
         skill: ''
       }
@@ -35,7 +105,6 @@ export default {
   },
   methods: {
     submit() {
-      // data is this.model
       this.$refs.myFormRef.validate((err, data) => {
         if (err) {
           console.log(err)
@@ -47,7 +116,6 @@ export default {
     },
     reset() {
       this.$refs.myFormRef.resetFields()
-      // this.$refs.myFormRef.resetFields(['name','password'])
       this.$message.success('表单已重置')
     },
     handleChange(data) {

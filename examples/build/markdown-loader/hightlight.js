@@ -39,7 +39,6 @@ module.exports = (str, lang) => {
   lang = getLangCodeFromExtension(lang)
 
   if (!prism.languages[lang]) {
-    console.log(1)
     try {
       loadLanguages([lang])
     } catch (e) {

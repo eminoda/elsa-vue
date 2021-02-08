@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Layout from '@/layout/Index.vue'
-
+import Card from '@/pages/card/Basic.md'
 Vue.use(Router)
 
 const routes = [
@@ -11,6 +11,22 @@ const routes = [
     meta: {
       title: '首页'
     }
+  },
+  {
+    path: '/card',
+    component: Layout,
+    meta: {
+      title: 'elsa-card 卡片'
+    },
+    children: [
+      {
+        path: 'basic',
+        component: Card,
+        meta: {
+          title: '基础用法'
+        }
+      }
+    ]
   },
   {
     path: '/table',
@@ -65,7 +81,7 @@ const routes = [
     children: [
       {
         path: 'basic',
-        component: require('@/pages/form/Basic.vue').default,
+        component: require('@/pages/form/Basic.md').default,
         meta: {
           title: '基础用法'
         }
@@ -110,22 +126,6 @@ const routes = [
         component: require('@/pages/form/Relate.vue').default,
         meta: {
           title: '联动关系'
-        }
-      }
-    ]
-  },
-  {
-    path: '/card',
-    component: Layout,
-    meta: {
-      title: 'elsa-card 卡片'
-    },
-    children: [
-      {
-        path: 'basic',
-        component: require('@/pages/card/Basic.vue').default,
-        meta: {
-          title: '基础用法'
         }
       }
     ]
