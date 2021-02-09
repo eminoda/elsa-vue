@@ -2,21 +2,21 @@ a.header-anchor {
   color: #409eff;
   text-decoration: none;
 }
-.content div:not(.el-picker-panel) table:not(.el-table__body, .el-table__header) {
+.content table:not([class='el-table__header'], [class='el-table__body']) {
   border-collapse: collapse;
   margin: 1rem 0;
   display: block;
   overflow-x: auto;
 }
 
-.content tr:not([class*='el_table']) {
+.content table:not([class='el-table__header'], [class='el-table__body']) tr {
   border-top: 1px solid #dfe2e5;
 }
-.content tr:nth-child(2n):not([class*='el_table']) {
+.content tr:nth-child(2n):not(.el-table__row) {
   background-color: #f6f8fa;
 }
-.content th:not([class*='el_table']),
-.content td:not([class*='el_table']) {
+.content table:not([class='el-table__header'], [class='el-table__body']) th,
+.content table:not([class='el-table__header'], [class='el-table__body']) td {
   border: 1px solid #dfe2e5;
   padding: 0.6em 1em;
 }
@@ -37,4 +37,12 @@ p a {
 }
 .content h3 {
   margin-top: 40px;
+}
+
+.el-table .warning-row {
+  background: oldlace;
+}
+
+.el-table .success-row {
+  background: #f0f9eb;
 }

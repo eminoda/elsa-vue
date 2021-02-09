@@ -111,15 +111,15 @@
 ```html
 <template>
   <div>
-    <div style="margin:10px 0;">边框 border + 斑马条 stripe</div>
+    <div style="margin:15px 0;">边框 border + 斑马条 stripe</div>
     <elsa-table border stripe :columns="columns" :dataSource="dataSource"> </elsa-table>
-    <div style="margin:10px 0;">带状态表格 row-class-name</div>
+    <div style="margin:15px 0;">带状态表格 row-class-name</div>
     <elsa-table :row-class-name="tableRowClassName" :columns="columns" :dataSource="dataSource"> </elsa-table>
-    <div style="margin:10px 0;">固定列 fixed + 定宽 width</div>
+    <div style="margin:15px 0;">固定列 fixed + 定宽 width</div>
     <elsa-table :columns="fixedColumns" :dataSource="dataSource"> </elsa-table>
-    <div style="margin:10px 0;">选择行 section</div>
+    <div style="margin:15px 0;">选择行 section</div>
     <elsa-table :columns="elAttrsColumns" :dataSource="dataSource" @selection-change="handleSelectionChange"> </elsa-table>
-    <div style="margin:10px 0;">单元格合并</div>
+    <div style="margin:15px 0;">单元格合并</div>
     <elsa-table border :columns="tableMergeColumns" :dataSource="dataSource" :span-method="arraySpanMethod"> </elsa-table>
   </div>
 </template>
@@ -221,16 +221,6 @@
     }
   }
 </script>
-
-<style>
-  .el-table .warning-row {
-    background: oldlace;
-  }
-
-  .el-table .success-row {
-    background: #f0f9eb;
-  }
-</style>
 ```
 
 :::
