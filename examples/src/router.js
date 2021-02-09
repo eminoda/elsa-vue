@@ -74,61 +74,10 @@ const routes = [
   },
   {
     path: '/form',
-    component: Layout,
+    component: require('@/pages/form/Index.md').default,
     meta: {
       title: 'elsa-form 表单'
-    },
-    children: [
-      {
-        path: 'basic',
-        component: require('@/pages/form/Basic.md').default,
-        meta: {
-          title: '基础用法'
-        }
-      },
-      {
-        path: 'rule',
-        component: require('@/pages/form/Rule.md').default,
-        meta: {
-          title: '数据校验'
-        }
-      },
-      {
-        path: 'layout',
-        component: require('@/pages/form/Layout.md').default,
-        meta: {
-          title: '自定义布局'
-        }
-      },
-      {
-        path: 'select',
-        component: require('@/pages/form/Select.md').default,
-        meta: {
-          title: '下拉框和懒加载'
-        }
-      },
-      {
-        path: 'time',
-        component: require('@/pages/form/Time.md').default,
-        meta: {
-          title: '时间选择器'
-        }
-      },
-      {
-        path: 'upload',
-        component: require('@/pages/form/Upload.md').default,
-        meta: {
-          title: '文件上传'
-        }
-      },
-      {
-        path: 'relate',
-        component: require('@/pages/form/Relate.md').default,
-        meta: {
-          title: '联动关系'
-        }
-      }
-    ]
+    }
   }
 ]
 export default new Router({

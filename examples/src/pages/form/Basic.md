@@ -152,7 +152,7 @@
 | field.options      | 当为 check，select 作为数据展示                                                                | Array                            |
 | field.visible      | 联动，可根据 model[filed] 来控制 **显示隐藏**                                                  | Boolean/String/Function({model}) |
 | field.customRender | 展示于 elTag 右侧的模板                                                                        | String                           |
-| field.slotRender   | elTag 内部的模板（比如：upload 中的内容）                                                      | String                           |
+| field.elSlots      | elTag 内签模板（比如：upload 中的内容，default 为默认插槽）                                    | String                           |
 
 支持 **el-form-item** 属性，[详见：Form-Item Attributes](https://element.eleme.cn/2.0/#/zh-CN/component/form#form-item-attributes)
 

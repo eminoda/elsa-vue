@@ -11,7 +11,7 @@
                 childItem.meta.title
               }}</el-menu-item>
             </el-submenu>
-            <!-- <el-menu-item v-else :key="index" :index="route.path">{{ route.meta.title }}</el-menu-item> -->
+            <el-menu-item v-else :key="index" :index="route.path">{{ route.meta.title }}</el-menu-item>
           </template>
         </el-menu>
       </el-aside>
