@@ -88,7 +88,7 @@ const routes = [
       },
       {
         path: 'rule',
-        component: require('@/pages/form/Rule.vue').default,
+        component: require('@/pages/form/Rule.md').default,
         meta: {
           title: '数据校验'
         }

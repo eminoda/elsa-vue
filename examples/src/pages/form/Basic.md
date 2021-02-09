@@ -154,11 +154,11 @@
 | field.customRender | 展示于 elTag 右侧的模板                                                                        | String                           |
 | field.slotRender   | elTag 内部的模板（比如：upload 中的内容）                                                      | String                           |
 
-支持 **el-form-item** 属性，[详见 Form-Item Attributes](https://element.eleme.cn/2.0/#/zh-CN/component/form#form-item-attributes)
+支持 **el-form-item** 属性，[详见：Form-Item Attributes](https://element.eleme.cn/2.0/#/zh-CN/component/form#form-item-attributes)
 
 ### ElsaForm.field.elAttrs
 
-对应 el-tag element 表单组件的属性，如下是做过封装的属性：
+对应 el-tag element 表单组件（el-input...）的属性说明，**如下是做过二次封装的属性**：
 
 | 参数         | 说明                            | 类型                                        | 可选值 | 默认值 |
 | ------------ | ------------------------------- | ------------------------------------------- | ------ | ------ |
@@ -177,6 +177,8 @@
 | children | 子项                              | Object\<layout> |            |
 | field    | 表单项字段                        | String          |            |
 
+elAttrs 支持 **el-row/col** 属性，[详见：Row/Col Attributes](https://element.eleme.cn/2.0/#/zh-CN/component/layout#row-attributes)
+
 ### ElsaForm.elProps
 
 | 参数         | 说明             | 类型   | 可选值                | 默认值 |
@@ -185,7 +187,7 @@
 | label-suffix | 表单域标签的后缀 | String |                       |        |
 | size         | 尺寸             | String | medium / small / mini |        |
 
-支持 **el-form** 属性，[详见 Form Attributes](https://element.eleme.cn/2.0/#/zh-CN/component/form#form-attributes)
+支持 **el-form** 属性，[详见：Form Attributes](https://element.eleme.cn/2.0/#/zh-CN/component/form#form-attributes)
 
 ### ElsaForm 方法
 
@@ -195,4 +197,4 @@
 | resetFields   | 重置表单项   | Function(props<Array \| String>) |
 | clearValidate | 校验结果清空 | Function(props<Array \| String>) |
 
-支持 **el-form** 方法，[详见 Form Methods](https://element.eleme.cn/2.0/#/zh-CN/component/form#form-methods)
+支持 **el-form** 方法，[详见：Form Methods](https://element.eleme.cn/2.0/#/zh-CN/component/form#form-methods)

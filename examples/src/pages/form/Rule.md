@@ -1,3 +1,15 @@
+### 数据校验
+
+如下示例，提供三种场景：
+
+1. 强校验 **required**：是否输入的普通校验
+2. 正则校验 **pattern**：满足密码框等需要通过正则表达式的校验
+3. 异步校验 **validator**：通过后端接口校验
+
+关于 **rule** 属性的细节，[详见：表单验证](https://element.eleme.cn/2.0/#/zh-CN/component/form#biao-dan-yan-zheng)
+
+::: demo
+
 ```html
 <template>
   <el-row type="flex" justify="center">
@@ -22,16 +34,21 @@
         placeholder: '请输入用户名',
         clearable: true
       },
-      elStyle: {
-        width: '80%'
-      },
-      customRender: 'nameCheck',
       rules: [
         { required: true, message: '用户名不能为空', trigger: 'change' },
         {
           validator: (rule, value, callback) => {
             if (value == 'eminoda') {
-              callback(new Error('用户名重复'))
+              callback(new Error('用户名不能为 eminoda'))
+            } else if (value) {
+              console.log('异步校验...')
+              setTimeout(() => {
+                if (value.length > 3) {
+                  callback(new Error('用户名重复'))
+                } else {
+                  callback()
+                }
+              }, 1000)
             } else {
               callback()
             }
@@ -42,7 +59,7 @@
     },
     password: {
       label: '密码',
-      extra: '示例：正则校验',
+      extra: '示例：正则校验（数字+字母，字数0-16位）',
       elTag: 'el-input',
       elAttrs: {
         type: 'password',
@@ -80,7 +97,7 @@
         this.$refs.myFormRef.validate((err, data) => {
           if (err) {
             console.log(err)
-            // this.$message.error('表单错误');
+            this.$message.error('表单错误')
           } else {
             console.log(data)
           }
@@ -96,3 +113,5 @@
 
 <style></style>
 ```
+
+:::

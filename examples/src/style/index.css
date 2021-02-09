@@ -31,3 +31,11 @@ p a {
   padding-right: 0;
   text-decoration: none;
 }
+.content {
+  color: #5e6d82;
+  font-size: 14px;
+  line-height: 1.5em;
+}
+.content h3 {
+  margin-top: 40px;
+}
