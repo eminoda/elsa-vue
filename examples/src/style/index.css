@@ -2,21 +2,21 @@ a.header-anchor {
   color: #409eff;
   text-decoration: none;
 }
-.content:not(.el-picker-panel) table {
+.content div:not(.el-picker-panel) table:not(.el-table__body, .el-table__header) {
   border-collapse: collapse;
   margin: 1rem 0;
   display: block;
   overflow-x: auto;
 }
 
-.content tr {
+.content tr:not([class*='el_table']) {
   border-top: 1px solid #dfe2e5;
 }
-.content tr:nth-child(2n) {
+.content tr:nth-child(2n):not([class*='el_table']) {
   background-color: #f6f8fa;
 }
-.content th,
-.content td {
+.content th:not([class*='el_table']),
+.content td:not([class*='el_table']) {
   border: 1px solid #dfe2e5;
   padding: 0.6em 1em;
 }

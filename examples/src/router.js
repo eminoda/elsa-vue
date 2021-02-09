@@ -1,7 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Layout from '@/layout/Index.vue'
-import Card from '@/pages/card/Basic.md'
 Vue.use(Router)
 
 const routes = [
@@ -14,63 +13,18 @@ const routes = [
   },
   {
     path: '/card',
-    component: Layout,
+    component: require('@/pages/card/Index.md').default,
     meta: {
       title: 'elsa-card 卡片'
-    },
-    children: [
-      {
-        path: 'basic',
-        component: Card,
-        meta: {
-          title: '基础用法'
-        }
-      }
-    ]
+    }
   },
   {
     path: '/table',
-    component: Layout,
+    // component: Layout,
+    component: require('@/pages/table/Index.md').default,
     meta: {
       title: 'elsa-table 表格'
-    },
-    children: [
-      {
-        path: 'basic',
-        component: require('@/pages/table/Basic.vue').default,
-        meta: {
-          title: '基础用法'
-        }
-      },
-      {
-        path: 'page',
-        component: require('@/pages/table/Page.vue').default,
-        meta: {
-          title: '分页组合'
-        }
-      },
-      {
-        path: 'customTemp',
-        component: require('@/pages/table/CustomTemp.vue').default,
-        meta: {
-          title: '自定义模板'
-        }
-      },
-      {
-        path: 'elAttrs',
-        component: require('@/pages/table/ElAttrs.vue').default,
-        meta: {
-          title: 'el-table 支持性'
-        }
-      },
-      {
-        path: 'tree',
-        component: require('@/pages/table/Tree.vue').default,
-        meta: {
-          title: '树型数据与懒加载'
-        }
-      }
-    ]
+    }
   },
   {
     path: '/form',
