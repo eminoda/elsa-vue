@@ -95,7 +95,7 @@ const routes = [
       },
       {
         path: 'layout',
-        component: require('@/pages/form/Layout.vue').default,
+        component: require('@/pages/form/Layout.md').default,
         meta: {
           title: '自定义布局'
         }
