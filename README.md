@@ -2,7 +2,7 @@
 
 :zap: elsa（eleme simple admin）基于 element-ui 封装 el-form，el-table 等组件，适用于快速开发后台管理项目。
 
-[🚀 Document 和 Demo](http://eminoda.github.io/elsa)
+用法示例，见：[🚀 Document 和 Demo](http://eminoda.github.io/elsa)
 
 ## Quickstart
 
@@ -72,22 +72,22 @@ export default {
       dataSource: [
         { name: 'eminoda', age: 30 },
         { name: 'foo', age: 40 },
-        { name: 'bar', age: 50 }
+        { name: 'bar', age: 50 },
       ],
       columns: [
         { label: '序号', align: 'center', type: 'index', width: '50' },
         { label: '姓名', align: 'center', prop: 'name', width: '100' },
-        { label: '年龄', align: 'center', prop: 'age', width: '100' }
+        { label: '年龄', align: 'center', prop: 'age', width: '100' },
       ],
       pagination: {
         pageSize: 10,
         currentPage: 1,
         total: 0,
-        currentChange: currentPage => {},
-        sizeChange: pageSize => {}
-      }
+        currentChange: (currentPage) => {},
+        sizeChange: (pageSize) => {},
+      },
     }
-  }
+  },
 }
 ```
 
@@ -160,27 +160,27 @@ export default {
           label: '用户名',
           elTag: 'el-input',
           elAttrs: {
-            placeholder: '请输入用户名'
+            placeholder: '请输入用户名',
           },
           customRender: 'nameCheck',
-          rules: [{ required: true, message: '用户名不能为空', trigger: 'change' }]
+          rules: [{ required: true, message: '用户名不能为空', trigger: 'change' }],
         },
         password: {
           label: '密码',
           elTag: 'el-input',
           elAttrs: {
             type: 'password',
-            showPassword: true
+            showPassword: true,
           },
-          rules: [{ required: true, trigger: 'change' }]
-        }
+          rules: [{ required: true, trigger: 'change' }],
+        },
       },
       model: {
         name: '',
-        password: ''
-      }
+        password: '',
+      },
     }
-  }
+  },
 }
 ```
 
