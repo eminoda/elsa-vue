@@ -25,7 +25,7 @@ export default {
 
 <style lang="less" scoped>
 .demo-wrap {
-  margin: 0 10%;
+  margin: 2% auto;
   border: 1px solid #ebebeb;
   border-radius: 3px;
   transition: 0.2s;

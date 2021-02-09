@@ -30,7 +30,7 @@ export default {
   },
   methods: {
     uploadEventsMixins() {
-      const done = value => this.$emit('change', value)
+      const done = value => this.$emit('change', { value })
       return this.mixinElAttrsEvents(false, { done })
     },
     renderSlots() {

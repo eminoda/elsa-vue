@@ -6,10 +6,11 @@ export default {
     mixinElAttrsEvents(isHyphenate, options = {}) {
       const { elAttrs } = this.fieldOptions
       const events = {}
+      const self = this
       Object.keys(elAttrs).forEach(prop => {
         if (is.function(elAttrs[prop])) {
           events[prop] = function mixinWrap(...args) {
-            return elAttrs[prop](...args, { model: this.model, ...options })
+            return elAttrs[prop].bind(self)(...args, { model: self.model, ...options })
           }
         }
       })

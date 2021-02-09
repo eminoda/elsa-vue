@@ -27,8 +27,8 @@ export default {
       if (elAttrs.pickerOptions) {
         const { disabledDate, ...pickerOptions } = elAttrs.pickerOptions
         if (disabledDate) {
-          this.pickerOptions.disabledDate = (value) => {
-            return disabledDate(value, { model: this.model })
+          this.pickerOptions.disabledDate = value => {
+            return disabledDate.bind(this)(value, { model: this.model })
           }
         }
         this.pickerOptions = Object.assign(this.pickerOptions, pickerOptions)
@@ -47,7 +47,7 @@ export default {
       on: {
         ...this.mixinElAttrsEvents(true),
         input: value => {
-          this.$emit('change', value)
+          this.$emit('change', { value })
         }
       }
     })

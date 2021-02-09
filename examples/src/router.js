@@ -102,28 +102,28 @@ const routes = [
       },
       {
         path: 'select',
-        component: require('@/pages/form/Select.vue').default,
+        component: require('@/pages/form/Select.md').default,
         meta: {
           title: '下拉框和懒加载'
         }
       },
       {
         path: 'time',
-        component: require('@/pages/form/Time.vue').default,
+        component: require('@/pages/form/Time.md').default,
         meta: {
           title: '时间选择器'
         }
       },
       {
         path: 'upload',
-        component: require('@/pages/form/Upload.vue').default,
+        component: require('@/pages/form/Upload.md').default,
         meta: {
           title: '文件上传'
         }
       },
       {
         path: 'relate',
-        component: require('@/pages/form/Relate.vue').default,
+        component: require('@/pages/form/Relate.md').default,
         meta: {
           title: '联动关系'
         }

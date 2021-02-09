@@ -206,12 +206,12 @@ export default {
           scopedSlots: this.getSlotRender(field)
         },
         on: {
-          change: value => {
+          change: ({ value, options }) => {
             // this.elFormOptions.model[field] = value
             this.setPathValue(field, value)
             const model = this.elFormOptions.model
             if (changeMethod) {
-              changeMethod.bind(this)({ value, model, field, rules: this.rules })
+              changeMethod.bind(this)({ value, model, field, rules: this.rules, options })
             }
             this.$emit('change', { model, field, value })
           }

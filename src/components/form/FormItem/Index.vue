@@ -181,7 +181,7 @@ export default {
           style: this.elStyle,
           on: {
             change: value => {
-              this.$emit('change', value)
+              this.$emit('change', { value })
             }
           }
         })
@@ -204,7 +204,7 @@ export default {
           style: this.elStyle,
           on: {
             input: value => {
-              this.$emit('change', value)
+              this.$emit('change', { value, options: this.options })
             },
             'visible-change': visible => {
               if (visible) {

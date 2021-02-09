@@ -2,27 +2,26 @@ a.header-anchor {
   color: #409eff;
   text-decoration: none;
 }
-table {
+.content:not(.el-picker-panel) table {
   border-collapse: collapse;
   margin: 1rem 0;
   display: block;
   overflow-x: auto;
 }
 
-tr {
+.content tr {
   border-top: 1px solid #dfe2e5;
 }
-tr:nth-child(2n) {
+.content tr:nth-child(2n) {
   background-color: #f6f8fa;
 }
-
-th,
-td {
+.content th,
+.content td {
   border: 1px solid #dfe2e5;
   padding: 0.6em 1em;
 }
 
-table a,
+.content:not(.el-picker-panel) table a,
 p a {
   border-color: transparent;
   color: #409eff;

@@ -47,7 +47,7 @@ export default {
       on: {
         ...this.mixinElAttrsEvents(true),
         input: value => {
-          this.$emit('change', value)
+          this.$emit('change', { value })
         }
       }
     })
