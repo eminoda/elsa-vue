@@ -25,9 +25,6 @@
         placeholder: '请输入用户名',
         clearable: true
       },
-      elSlots: {
-        prepend: 'name-icon'
-      },
       rules: [{ required: true, message: '用户名不能为空', trigger: 'change' }]
     },
     // 密码输入框
@@ -1120,7 +1117,7 @@
     password: {
       label: '密码',
       elTag: 'el-input',
-      elAttrs: {},
+      elAttrs: {}, 
       elSlots: {
         prepend: 'prepend-icon-pwd'
       }
