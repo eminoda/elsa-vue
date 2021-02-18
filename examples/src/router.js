@@ -35,7 +35,7 @@ const routes = [
   }
 ]
 export default new Router({
-  mode: 'history',
+  // mode: 'history',
   scrollBehavior: () => ({ y: 0 }),
   routes
 })

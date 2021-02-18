@@ -2,7 +2,7 @@
 
 :zap: elsa（eleme simple admin）基于 element-ui 封装 el-form，el-table 等组件，适用于快速开发后台管理项目。
 
-用法示例，见：[🚀 Document 和 Demo](http://eminoda.github.io/elsa)
+用法示例，见：[🚀 Document 和 Demo](http://www.eminoda.com/elsa/)
 
 ## Quickstart
 
@@ -23,35 +23,29 @@ Vue.use(Elsa)
 
 ## Feature
 
-- [ ] elsa-form
-  - [x] 自定义布局
-  - [x] 数据回显
-  - [x] 表单校验和重置
-  - [x] tip 信息提示
-  - [x] 嵌套 nest 对象的解析
-  - [x] 表单整体 disabled 设置
-  - [x] 表单项：动态/联动
-    - [x] 禁用/可用
-    - [x] 显示/隐藏
-    - [x] 动态修改校验规则
-    - [ ] 内部支持 \$store
-    - [ ] 动态修改多选项 options
-  - [ ] 支持表单项
-    - [x] 输入框 input
-      - [ ] 历史信息下拉展示
-    - [x] 下拉框 select
-      - [x] 支持延迟加载
-      - [x] tags 多选模式
-    - [x] 多选框 checkbox
-    - [x] 单选框 radio
-    - [x] 级联选择
-    - [x] 时间控件 date-picker
-      - [x] 不同表单项之间的时间跨度限制
-    - [x] 文件上传 upload
-- [x] else-table
-  - [x] 可配置列表列
-  - [x] 支持分页控件配置
-  - [x] 支持树形数据展示及懒加载
+- else-card
+  - 支持主副标题的设置
+- else-table
+  - 可配置列表列
+  - 支持分页控件
+  - 支持树形数据展示及懒加载
+- elsa-form
+  - 支持的表单组件
+    - el-input
+    - el-radio
+    - el-checkbox
+    - el-select
+    - el-upload
+    - el-xxx-picker
+  - 自定义布局
+  - 表单校验和重置
+  - 嵌套对象 nest 的解析
+  - 表单整体 disabled 设置
+  - 表单项的提示 tip 信息
+  - 表单项：动态/联动
+    - 禁用/可用
+    - 显示/隐藏
+    - 动态修改多选项 options
 
 ## elsa-table
 
@@ -72,22 +66,22 @@ export default {
       dataSource: [
         { name: 'eminoda', age: 30 },
         { name: 'foo', age: 40 },
-        { name: 'bar', age: 50 },
+        { name: 'bar', age: 50 }
       ],
       columns: [
         { label: '序号', align: 'center', type: 'index', width: '50' },
         { label: '姓名', align: 'center', prop: 'name', width: '100' },
-        { label: '年龄', align: 'center', prop: 'age', width: '100' },
+        { label: '年龄', align: 'center', prop: 'age', width: '100' }
       ],
       pagination: {
         pageSize: 10,
         currentPage: 1,
         total: 0,
-        currentChange: (currentPage) => {},
-        sizeChange: (pageSize) => {},
-      },
+        currentChange: currentPage => {},
+        sizeChange: pageSize => {}
+      }
     }
-  },
+  }
 }
 ```
 
@@ -160,27 +154,27 @@ export default {
           label: '用户名',
           elTag: 'el-input',
           elAttrs: {
-            placeholder: '请输入用户名',
+            placeholder: '请输入用户名'
           },
           customRender: 'nameCheck',
-          rules: [{ required: true, message: '用户名不能为空', trigger: 'change' }],
+          rules: [{ required: true, message: '用户名不能为空', trigger: 'change' }]
         },
         password: {
           label: '密码',
           elTag: 'el-input',
           elAttrs: {
             type: 'password',
-            showPassword: true,
+            showPassword: true
           },
-          rules: [{ required: true, trigger: 'change' }],
-        },
+          rules: [{ required: true, trigger: 'change' }]
+        }
       },
       model: {
         name: '',
-        password: '',
-      },
+        password: ''
+      }
     }
-  },
+  }
 }
 ```
 
