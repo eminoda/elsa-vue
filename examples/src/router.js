@@ -6,7 +6,7 @@ Vue.use(Router)
 const routes = [
   {
     path: '/',
-    redirect: '/table/basic',
+    redirect: '/table',
     meta: {
       title: '首页'
     }
