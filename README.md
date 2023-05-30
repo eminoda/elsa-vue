@@ -2,7 +2,7 @@
 
 :zap: elsa（eleme simple admin）基于 element-ui 封装 el-form，el-table 等组件，适用于快速开发后台管理项目。
 
-用法示例，见：[🚀 Document 和 Demo](http://www.eminoda.com/elsa/)
+用法示例，见：example
 
 ## Quickstart
 
